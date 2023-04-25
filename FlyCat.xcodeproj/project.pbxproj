@@ -21,7 +21,7 @@
 		6897336929F557D700BC7630 /* Swifter in Frameworks */ = {isa = PBXBuildFile; productRef = 6897336829F557D700BC7630 /* Swifter */; };
 		6897336C29F557EC00BC7630 /* SwiftyXMLParser in Frameworks */ = {isa = PBXBuildFile; productRef = 6897336B29F557EC00BC7630 /* SwiftyXMLParser */; };
 		6897336F29F5582100BC7630 /* CocoaLumberjack in Frameworks */ = {isa = PBXBuildFile; productRef = 6897336E29F5582100BC7630 /* CocoaLumberjack */; };
-		6897337129F5642900BC7630 /* FCMobileNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6897337029F5642900BC7630 /* FCMobileNetworkManager.swift */; };
+		6897337129F5642900BC7630 /* FCNetworkUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6897337029F5642900BC7630 /* FCNetworkUtil.swift */; };
 		6897337329F565E800BC7630 /* FCWebNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6897337229F565E800BC7630 /* FCWebNetworkManager.swift */; };
 		6897337529F578E000BC7630 /* UserDefault+..swift in Sources */ = {isa = PBXBuildFile; fileRef = 6897337429F578E000BC7630 /* UserDefault+..swift */; };
 		68CE6F1C29F3D47700DBE8F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68CE6F1629F3D47700DBE8F6 /* Assets.xcassets */; };
@@ -38,7 +38,7 @@
 /* Begin PBXFileReference section */
 		6809231F29F3F4C300A4A8BC /* FCHomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCHomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		6809232029F3F4C300A4A8BC /* FCHomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FCHomeCollectionViewCell.xib; sourceTree = "<group>"; };
-		6897337029F5642900BC7630 /* FCMobileNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCMobileNetworkManager.swift; sourceTree = "<group>"; };
+		6897337029F5642900BC7630 /* FCNetworkUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCNetworkUtil.swift; sourceTree = "<group>"; };
 		6897337229F565E800BC7630 /* FCWebNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCWebNetworkManager.swift; sourceTree = "<group>"; };
 		6897337429F578E000BC7630 /* UserDefault+..swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDefault+..swift"; sourceTree = "<group>"; };
 		68CE6F0029F3D42C00DBE8F6 /* FlyCat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlyCat.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -187,7 +187,7 @@
 		68CE6F2D29F3D61600DBE8F6 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				6897337029F5642900BC7630 /* FCMobileNetworkManager.swift */,
+				6897337029F5642900BC7630 /* FCNetworkUtil.swift */,
 				6897337229F565E800BC7630 /* FCWebNetworkManager.swift */,
 			);
 			path = Network;
@@ -368,7 +368,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				68CE6F4029F3DD3900DBE8F6 /* FCHomeViewController.swift in Sources */,
-				6897337129F5642900BC7630 /* FCMobileNetworkManager.swift in Sources */,
+				6897337129F5642900BC7630 /* FCNetworkUtil.swift in Sources */,
 				6809232129F3F4C300A4A8BC /* FCHomeCollectionViewCell.swift in Sources */,
 				6897337529F578E000BC7630 /* UserDefault+..swift in Sources */,
 				6897337329F565E800BC7630 /* FCWebNetworkManager.swift in Sources */,

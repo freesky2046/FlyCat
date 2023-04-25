@@ -51,7 +51,7 @@ struct UserDefaultCodable<T: Codable> {
 
     var wrappedValue: T {
         get {
-            guard let value: T? = userDefaults.codable(forKey: key) else {
+            guard let value: T? = userDefaults.codeable(forKey: key) else {
                 return defaultValue
             }
 

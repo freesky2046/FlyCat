@@ -7,16 +7,21 @@
 
 import UIKit
 import CoreImage
-
+import Alamofire
 
 class FCLoginViewController: UIViewController {
     
     @IBOutlet weak var qrImageView: UIImageView!
-    var timer:Timer?
-    
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
-//        qrImageView.image = FCQRBuilder.generateQRCode(from: "www.baidu.com")
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        refreshQRCode()
     }
     
     static func build() -> FCLoginViewController? {
@@ -24,13 +29,13 @@ class FCLoginViewController: UIViewController {
         return vc
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        refreshQRCode()
-    }
     
     func refreshQRCode() -> Void {
-        timer?.invalidate()
+        var p:Parameters = [:]
+        p["response_type"] = "device_code"
+        FCNetworkUtil.request(FCUrl.deviceCode, method: .get, parameters: p, needAuth: false, encoding: URLEncoding.default) { response in
+
+        }
     }
     
 
