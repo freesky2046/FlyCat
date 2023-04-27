@@ -7,7 +7,8 @@
 
 import UIKit
 import Alamofire
-import SwiftyJSON
+//import SwiftyJSON
+import HandyJSON
 
 
 struct FCNetworkSecret {
@@ -17,6 +18,7 @@ struct FCNetworkSecret {
 
 struct FCUrl {
     static let deviceCode = "https://openapi.baidu.com/oauth/2.0/device/code"
+    static let getToken = "https://openapi.baidu.com/oauth/2.0/token"
 }
 
 struct LoginToken: Codable {
@@ -40,7 +42,7 @@ class FCNetworkUtil  {
                         parameters:Parameters = [:],
                         needAuth:Bool = true,
                         encoding: ParameterEncoding = URLEncoding.default,
-                        complete: ((Result<JSON, RequestError>) -> Void)? = nil)
+                        complete: ((Result<String, AFError>) -> Void)? = nil)
     {
         var p = parameters;
         if(needAuth) {
@@ -48,18 +50,15 @@ class FCNetworkUtil  {
         }
         p["client_id"] = FCNetworkSecret.appKey;
         p["scope"] = FCNetworkSecret.scope;
-        AF.request(url, method: method, parameters: p, encoding: encoding).responseData { response in
+
+        AF.request(url, method: method, parameters: p, encoding: encoding, headers: nil, interceptor: nil, requestModifier: nil).responseString { response in
             switch response.result {
-            case let .success(data):
-                let json = JSON(data)
-                print(json)
-                complete?(.success(json))
-            case let .failure(err):
-                print(err)
-                complete?(.failure(.networkFail))
+            case .success(let data):
+                complete?(.success(data))
+            case .failure(let error):
+                complete?(.failure(error))
             }
-        }
-        
+        };
     }
     
     static func userToken() -> LoginToken? {
