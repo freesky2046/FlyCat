@@ -15,7 +15,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow();
-        window?.rootViewController = FCLoginViewController.build()
+        let token = FCNetworkUtil.userToken();
+        if(token?.access_token != nil) {
+            window?.rootViewController = FCFileListViewController.build();
+        }else {
+            window?.rootViewController = FCLoginViewController.build()
+        }
         window?.makeKeyAndVisible();
         return true
     }

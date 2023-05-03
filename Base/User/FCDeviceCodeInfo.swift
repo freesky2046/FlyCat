@@ -37,3 +37,13 @@ class FCDeviceCodeInfo: HandyJSON {
     var interval:Int?
     required init() {}
 }
+
+class FCTokenInfo : HandyJSON,Codable {
+    var access_token:String?
+    var expires_in:String?
+    var refresh_token:String?
+    var scope:String?
+    var error:String?
+    required init() {}
+
+}

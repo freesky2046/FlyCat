@@ -15,6 +15,8 @@ class FCLoginViewController: UIViewController {
     var timer:Timer?
     var finalTimes = 200
     var times = 0;
+    var device_code:String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -45,7 +47,8 @@ class FCLoginViewController: UIViewController {
                 if let user_code = deviceInfo?.user_code, let device_code = deviceInfo?.device_code {
                     let qrUrl  = "https://openapi.baidu.com/device?display=mobile&code=" + "\(user_code)"
                     self?.qrImageView.image = FCQRBuilder.generateQRCode(from: qrUrl)
-                    self?.loopFetchToken(device_code)
+                    self?.device_code = device_code;
+                    self?.loopFetchToken()
                 }
             case .failure(let error):
                print(error)
@@ -53,24 +56,42 @@ class FCLoginViewController: UIViewController {
         }
     }
     
-    func loopFetchToken(_ device_code:String) -> Void {
+    func loopFetchToken() -> Void {
         destroyTimer()
-        startTimer(device_code)
+        startTimer()
     }
     
-    func startTimer(_ device_code:String)  {
-        
+    func startTimer()  {
+        let s:Selector = #selector(FCLoginViewController.fetchToken);
+        timer = Timer(timeInterval: 5.0, target: self, selector:s, userInfo: nil, repeats: true);
+        RunLoop.main.add(timer!, forMode: .common);
     }
     
-    func fetchToken(_ device_code:String) {
+    @objc(fetchToken)
+    func fetchToken() {
         var p:Parameters = [:]
         p["grant_type"] = "device_token"
         p["code"] = device_code
         p["client_secret"] = "EaxS0aDs6KB12DfawxddULADEAGTBLIc"
+        times = times + 1;
+        if(times > finalTimes) { // 如果一直轮询不到，那么重新走获取验证码流程
+            destroyTimer()
+            refreshQRCode()
+            return
+        }
         FCNetworkUtil.request(FCUrl.getToken, parameters: p, needAuth: false) { [weak self] response in
             switch response {
             case .success(let result):
-                print(result)
+                let tokenInfo = FCTokenInfo.deserialize(from: result)
+                if let err = tokenInfo?.error {
+                    print(err)
+                }
+                else if let token = tokenInfo?.access_token {
+                    print(token)
+                    self?.destroyTimer();
+                    UserDefaults.standard.set(tokenInfo, forKey: "flycat.token")  
+                }
+                
             case .failure(let error):
                 print(error)
             }

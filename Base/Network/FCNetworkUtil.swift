@@ -46,7 +46,7 @@ class FCNetworkUtil  {
     {
         var p = parameters;
         if(needAuth) {
-            p["access_key"] = userToken()?.accessToken
+            p["access_key"] = userToken()?.access_token
         }
         p["client_id"] = FCNetworkSecret.appKey;
         p["scope"] = FCNetworkSecret.scope;
@@ -61,8 +61,8 @@ class FCNetworkUtil  {
         };
     }
     
-    static func userToken() -> LoginToken? {
-        if let token: LoginToken =  UserDefaults.standard.codeable(forKey: "Token") {
+    static func userToken() -> FCTokenInfo? {
+        if let token: FCTokenInfo =  UserDefaults.standard.codeable(forKey: "flycat.token") {
             return token
         }else {
             return nil
