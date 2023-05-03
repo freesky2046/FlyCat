@@ -7,10 +7,12 @@
 
 import UIKit
 import Alamofire
+import HandyJSON
 
 class FCFileListViewController: UIViewController {
 
     public let parent_path:String = "/"
+    private var dataArray:[FCVideoListInfo]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,14 +29,32 @@ class FCFileListViewController: UIViewController {
         p["method"] = "videolist HTTP/1.1";
         p["parent_path"] = parent_path;
         p["web"] = 1;
-        FCNetworkUtil.request("https://pan.baidu.com/rest/2.0/xpan/file", parameters: p) { res in
+        FCNetworkUtil.request("https://pan.baidu.com/rest/2.0/xpan/file", parameters: p) {[weak self] res in
             switch res {
             case .success(let data):
-                print(data)
+                let videoRes =  FCVideoListInfoRes.deserialize(from: data);
+                if let  errorno = videoRes?.errno  {
+                    if errorno != 0 {
+                        self?.showError()
+                    }else {
+                        self?.dataArray = videoRes?.info
+                        self?.reloadData()
+                    }
+                }else {
+                    self?.showError()
+                }
             case .failure(let error):
                 print(error)
             }
         }
+        
+    }
+    
+    func reloadData() {
+        
+    }
+    
+    func showError() {
         
     }
     
