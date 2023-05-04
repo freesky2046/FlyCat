@@ -48,7 +48,8 @@ class FCLoginViewController: UIViewController {
                     let qrUrl  = "https://openapi.baidu.com/device?display=mobile&code=" + "\(user_code)"
                     self?.qrImageView.image = FCQRBuilder.generateQRCode(from: qrUrl)
                     self?.device_code = device_code;
-                    self?.loopFetchToken()
+                    self?.fetchToken();
+                    self?.startTimer()
                 }
             case .failure(let error):
                print(error)
@@ -56,14 +57,10 @@ class FCLoginViewController: UIViewController {
         }
     }
     
-    func loopFetchToken() -> Void {
-        destroyTimer()
-        startTimer()
-    }
-    
     func startTimer()  {
+        destroyTimer()
         let s:Selector = #selector(FCLoginViewController.fetchToken);
-        timer = Timer(timeInterval: 5.0, target: self, selector:s, userInfo: nil, repeats: true);
+        timer = Timer(timeInterval: 5.0, target: self, selector:s, userInfo: nil, repeats: false);
         RunLoop.main.add(timer!, forMode: .common);
     }
     
@@ -75,7 +72,6 @@ class FCLoginViewController: UIViewController {
         p["client_secret"] = "EaxS0aDs6KB12DfawxddULADEAGTBLIc"
         times = times + 1;
         if(times > finalTimes) { // 如果一直轮询不到，那么重新走获取验证码流程
-            destroyTimer()
             refreshQRCode()
             return
         }
@@ -85,6 +81,7 @@ class FCLoginViewController: UIViewController {
                 let tokenInfo = FCTokenInfo.deserialize(from: result)
                 if let err = tokenInfo?.error {
                     print(err)
+                    self?.startTimer()
                 }
                 else if let token = tokenInfo?.access_token {
                     print(token)
@@ -94,6 +91,7 @@ class FCLoginViewController: UIViewController {
                 
             case .failure(let error):
                 print(error)
+                self?.startTimer()
             }
         }
     }

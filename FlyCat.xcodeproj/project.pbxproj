@@ -104,7 +104,6 @@
 		68CE6EF729F3D42C00DBE8F6 = {
 			isa = PBXGroup;
 			children = (
-				68CE6F2C29F3D60700DBE8F6 /* Vendor */,
 				68CE6F2629F3D5C400DBE8F6 /* Base */,
 				68CE6F2229F3D5BC00DBE8F6 /* Pages */,
 				68CE6F1529F3D47700DBE8F6 /* Support */,
@@ -133,10 +132,7 @@
 		68CE6F2229F3D5BC00DBE8F6 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
-				68E7C5A229FAC1A8004D94CF /* Play */,
 				68E7C5A129FAC195004D94CF /* FileList */,
-				68CE6F3629F3D66A00DBE8F6 /* Setting */,
-				68CE6F3529F3D66000DBE8F6 /* VideoDetail */,
 				68CE6F2F29F3D62600DBE8F6 /* Home */,
 				68CE6F2E29F3D61F00DBE8F6 /* Login */,
 			);
@@ -147,11 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				68CE6F4229F3DEC100DBE8F6 /* User */,
-				68CE6F3829F3D8EB00DBE8F6 /* Player */,
 				68CE6F2D29F3D61600DBE8F6 /* Network */,
-				68CE6F2B29F3D5FF00DBE8F6 /* ViewController */,
-				68CE6F2A29F3D5EF00DBE8F6 /* Views */,
-				68CE6F2929F3D5E200DBE8F6 /* Constants */,
 				68CE6F2729F3D5CD00DBE8F6 /* Util */,
 			);
 			path = Base;
@@ -166,34 +158,6 @@
 			path = Util;
 			sourceTree = "<group>";
 		};
-		68CE6F2929F3D5E200DBE8F6 /* Constants */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Constants;
-			sourceTree = "<group>";
-		};
-		68CE6F2A29F3D5EF00DBE8F6 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		68CE6F2B29F3D5FF00DBE8F6 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
-		68CE6F2C29F3D60700DBE8F6 /* Vendor */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Vendor;
-			sourceTree = "<group>";
-		};
 		68CE6F2D29F3D61600DBE8F6 /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,7 +169,6 @@
 		68CE6F2E29F3D61F00DBE8F6 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				68CE6F3729F3D8D800DBE8F6 /* View */,
 				68CE6F3429F3D65300DBE8F6 /* ViewController */,
 			);
 			path = Login;
@@ -227,34 +190,6 @@
 				68CE6F3129F3D64C00DBE8F6 /* FCLoginViewController.xib */,
 			);
 			path = ViewController;
-			sourceTree = "<group>";
-		};
-		68CE6F3529F3D66000DBE8F6 /* VideoDetail */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = VideoDetail;
-			sourceTree = "<group>";
-		};
-		68CE6F3629F3D66A00DBE8F6 /* Setting */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Setting;
-			sourceTree = "<group>";
-		};
-		68CE6F3729F3D8D800DBE8F6 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		68CE6F3829F3D8EB00DBE8F6 /* Player */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Player;
 			sourceTree = "<group>";
 		};
 		68CE6F3B29F3DD1800DBE8F6 /* ViewController */ = {
@@ -281,13 +216,6 @@
 				68E7C5A72A02ABE3004D94CF /* ViewController */,
 			);
 			path = FileList;
-			sourceTree = "<group>";
-		};
-		68E7C5A229FAC1A8004D94CF /* Play */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Play;
 			sourceTree = "<group>";
 		};
 		68E7C5A72A02ABE3004D94CF /* ViewController */ = {
