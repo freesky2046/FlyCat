@@ -32,7 +32,7 @@ class FCFileListViewController: UIViewController {
     
     func refreshFileList() {
         var p:Parameters = [:];
-        p["method"] = "videolist HTTP/1.1";
+        p["method"] = "videolist";
         p["parent_path"] = parent_path;
         p["web"] = 1;
         FCNetworkUtil.request("https://pan.baidu.com/rest/2.0/xpan/file", parameters: p) {[weak self] res in

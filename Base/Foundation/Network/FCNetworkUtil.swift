@@ -42,16 +42,17 @@ class FCNetworkUtil  {
                         parameters:Parameters = [:],
                         needAuth:Bool = true,
                         encoding: ParameterEncoding = URLEncoding.default,
+                        headers:HTTPHeaders = ["User-Agent":"pan.baidu.com"],
                         complete: ((Result<String, AFError>) -> Void)? = nil)
     {
         var p = parameters;
         if(needAuth) {
-            p["access_key"] = userToken()?.access_token
+            p["access_token"] = userToken()?.access_token
         }
         p["client_id"] = FCNetworkSecret.appKey;
         p["scope"] = FCNetworkSecret.scope;
 
-        AF.request(url, method: method, parameters: p, encoding: encoding, headers: nil, interceptor: nil, requestModifier: nil).responseString { response in
+        AF.request(url, method: method, parameters: p, encoding: encoding, headers: headers, interceptor: nil, requestModifier: nil).responseString { response in
             switch response.result {
             case .success(let data):
                 complete?(.success(data))
@@ -62,11 +63,13 @@ class FCNetworkUtil  {
     }
     
     static func userToken() -> FCTokenInfo? {
-        if let token: FCTokenInfo =  UserDefaults.standard.codeable(forKey: "flycat.token") {
-            return token
-        }else {
+        let data = UserDefaults.standard.value(forKey: "fly.cat.token")
+        if data == nil {
             return nil
         }
+        let str = String(data: data as! Data, encoding: .utf8)
+        let tokenInfo =  FCTokenInfo.deserialize(from: str)
+        return tokenInfo
     }
 
 }

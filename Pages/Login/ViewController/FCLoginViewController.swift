@@ -86,7 +86,9 @@ class FCLoginViewController: UIViewController {
                 else if let token = tokenInfo?.access_token {
                     print(token)
                     self?.destroyTimer();
-                    UserDefaults.standard.set(tokenInfo, forKey: "flycat.token")
+                    let data = DataConverter.convert(model: tokenInfo!) /// model --- jsonstring--->data
+                    UserDefaults.standard.set(data, forKey: "fly.cat.token")
+                    
                     self?.dismiss(animated: true)
                 }
                 
