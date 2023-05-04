@@ -86,7 +86,8 @@ class FCLoginViewController: UIViewController {
                 else if let token = tokenInfo?.access_token {
                     print(token)
                     self?.destroyTimer();
-                    UserDefaults.standard.set(tokenInfo, forKey: "flycat.token")  
+                    UserDefaults.standard.set(tokenInfo, forKey: "flycat.token")
+                    self?.dismiss(animated: true)
                 }
                 
             case .failure(let error):

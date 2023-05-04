@@ -21,7 +21,13 @@ class FCFileListViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        refreshFileList();
+        let token = FCNetworkUtil.userToken();
+        if(token?.access_token == nil){
+            let login:FCLoginViewController? = FCLoginViewController.build();
+            self.present(login!, animated: true)
+        }else {
+            refreshFileList();
+        }
     }
     
     func refreshFileList() {
