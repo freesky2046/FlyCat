@@ -16,6 +16,9 @@
 		6863ADD62A03DCA300446A13 /* FCNetworkUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6863ADD12A03DCA300446A13 /* FCNetworkUtil.swift */; };
 		6863ADD72A03DCA300446A13 /* FCDeviceCodeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6863ADD32A03DCA300446A13 /* FCDeviceCodeInfo.swift */; };
 		6863ADD92A03DFF100446A13 /* DataConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6863ADD82A03DFF100446A13 /* DataConverter.swift */; };
+		6863ADDD2A052EA900446A13 /* FCVideoItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6863ADDB2A052EA900446A13 /* FCVideoItemCell.swift */; };
+		6863ADDE2A052EA900446A13 /* FCVideoItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6863ADDC2A052EA900446A13 /* FCVideoItemCell.xib */; };
+		6863ADE02A053BDF00446A13 /* FCConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6863ADDF2A053BDF00446A13 /* FCConstant.swift */; };
 		6897334E29F5570B00BC7630 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 6897334D29F5570B00BC7630 /* SnapKit */; };
 		6897335129F5572400BC7630 /* Starscream in Frameworks */ = {isa = PBXBuildFile; productRef = 6897335029F5572400BC7630 /* Starscream */; };
 		6897335429F5574200BC7630 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 6897335329F5574200BC7630 /* SwiftyJSON */; };
@@ -48,6 +51,9 @@
 		6863ADD12A03DCA300446A13 /* FCNetworkUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FCNetworkUtil.swift; sourceTree = "<group>"; };
 		6863ADD32A03DCA300446A13 /* FCDeviceCodeInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FCDeviceCodeInfo.swift; sourceTree = "<group>"; };
 		6863ADD82A03DFF100446A13 /* DataConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataConverter.swift; sourceTree = "<group>"; };
+		6863ADDB2A052EA900446A13 /* FCVideoItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCVideoItemCell.swift; sourceTree = "<group>"; };
+		6863ADDC2A052EA900446A13 /* FCVideoItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FCVideoItemCell.xib; sourceTree = "<group>"; };
+		6863ADDF2A053BDF00446A13 /* FCConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCConstant.swift; sourceTree = "<group>"; };
 		68CE6F0029F3D42C00DBE8F6 /* FlyCat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlyCat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68CE6F1629F3D47700DBE8F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		68CE6F1829F3D47700DBE8F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -155,6 +161,7 @@
 		6863ADCF2A03DCA300446A13 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				6863ADDF2A053BDF00446A13 /* FCConstant.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -173,6 +180,15 @@
 				6863ADD32A03DCA300446A13 /* FCDeviceCodeInfo.swift */,
 			);
 			path = User;
+			sourceTree = "<group>";
+		};
+		6863ADDA2A052E3800446A13 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6863ADDB2A052EA900446A13 /* FCVideoItemCell.swift */,
+				6863ADDC2A052EA900446A13 /* FCVideoItemCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		68CE6EF729F3D42C00DBE8F6 = {
@@ -260,6 +276,7 @@
 		68E7C5A129FAC195004D94CF /* FileList */ = {
 			isa = PBXGroup;
 			children = (
+				6863ADDA2A052E3800446A13 /* View */,
 				6863ADC12A02AC3800446A13 /* Model */,
 				68E7C5A72A02ABE3004D94CF /* ViewController */,
 			);
@@ -366,6 +383,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				68CE6F1C29F3D47700DBE8F6 /* Assets.xcassets in Resources */,
+				6863ADDE2A052EA900446A13 /* FCVideoItemCell.xib in Resources */,
 				6809232229F3F4C300A4A8BC /* FCHomeCollectionViewCell.xib in Resources */,
 				68E7C5A029FAC176004D94CF /* FCHomeViewController.xib in Resources */,
 				6863ADC02A02AC1800446A13 /* FCFileListViewController.xib in Resources */,
@@ -382,6 +400,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6809232129F3F4C300A4A8BC /* FCHomeCollectionViewCell.swift in Sources */,
+				6863ADDD2A052EA900446A13 /* FCVideoItemCell.swift in Sources */,
+				6863ADE02A053BDF00446A13 /* FCConstant.swift in Sources */,
 				6863ADD72A03DCA300446A13 /* FCDeviceCodeInfo.swift in Sources */,
 				6863ADD62A03DCA300446A13 /* FCNetworkUtil.swift in Sources */,
 				68E7C5A52A02A182004D94CF /* FCFileListViewController.swift in Sources */,

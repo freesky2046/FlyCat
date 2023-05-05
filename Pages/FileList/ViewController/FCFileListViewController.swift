@@ -9,14 +9,17 @@ import UIKit
 import Alamofire
 import HandyJSON
 
-class FCFileListViewController: UIViewController {
-
+class FCFileListViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
+ 
     public let parent_path:String = "/"
     private var dataArray:[FCVideoListInfo]?
+    @IBOutlet weak private var collectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        collectionView.register(UINib(nibName:"FCVideoItemCell", bundle: nil), forCellWithReuseIdentifier:"FCVideoItemCell");
+        collectionView.delegate = self;
+        collectionView.dataSource = self;
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -30,9 +33,10 @@ class FCFileListViewController: UIViewController {
         }
     }
     
+    // MARK: - request & handle
     func refreshFileList() {
         var p:Parameters = [:];
-        p["method"] = "videolist";
+        p["method"] = "list";
         p["parent_path"] = parent_path;
         p["web"] = 1;
         FCNetworkUtil.request("https://pan.baidu.com/rest/2.0/xpan/file", parameters: p) {[weak self] res in
@@ -43,7 +47,7 @@ class FCFileListViewController: UIViewController {
                     if errorno != 0 {
                         self?.showError()
                     }else {
-                        self?.dataArray = videoRes?.info
+                        self?.dataArray = videoRes?.list
                         self?.reloadData()
                     }
                 }else {
@@ -57,7 +61,7 @@ class FCFileListViewController: UIViewController {
     }
     
     func reloadData() {
-        
+        self.collectionView.reloadData()
     }
     
     func showError() {
@@ -68,4 +72,34 @@ class FCFileListViewController: UIViewController {
         let vc = FCFileListViewController(nibName: "FCFileListViewController", bundle: nil);
         return vc
     }
+    
+    // MARK: - collectionView Delegate collectionView dataSource collectionView flowlayout
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FCVideoItemCell", for: indexPath) as! FCVideoItemCell
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+         if let count = self.dataArray?.count {
+            return count
+         }else {
+             return 0
+         }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let count = 5.0;
+        let width:CGFloat = (FCConstant.screenWidth - 60.0 * (count - 1.0)) / count
+        return CGSizeMake(width, width)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 60
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 60
+    }
+    
 }
