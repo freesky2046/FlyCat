@@ -18,7 +18,7 @@ class FCVideoItemCell: UICollectionViewCell {
     
     public var type:FCVideoItemStyle = .folder
     @IBOutlet weak var folderContainer: UIView!
-    
+    @IBOutlet weak var folderImageView: UIImageView!
     @IBOutlet weak var videoContainer: UIView!
     @IBOutlet weak var videoImageView: UIImageView!
     
@@ -41,6 +41,7 @@ class FCVideoItemCell: UICollectionViewCell {
         func _showFolder(){
             folderContainer.isHidden = false
             videoContainer.isHidden = true
+            folderImageView.image = UIImage(named: "")
         }
         
         func _showVideo() {

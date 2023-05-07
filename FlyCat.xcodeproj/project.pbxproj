@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6809232129F3F4C300A4A8BC /* FCHomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6809231F29F3F4C300A4A8BC /* FCHomeCollectionViewCell.swift */; };
-		6809232229F3F4C300A4A8BC /* FCHomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6809232029F3F4C300A4A8BC /* FCHomeCollectionViewCell.xib */; };
+		68488A3C2A0783C8003C64DF /* FCPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68488A3A2A0783C8003C64DF /* FCPlayerViewController.swift */; };
+		68488A3D2A0783C8003C64DF /* FCPlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68488A3B2A0783C8003C64DF /* FCPlayerViewController.xib */; };
 		6850333E29FAA4E1000CEEB5 /* HandyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 6850333D29FAA4E1000CEEB5 /* HandyJSON */; };
 		6863ADC02A02AC1800446A13 /* FCFileListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6863ADBF2A02AC1800446A13 /* FCFileListViewController.xib */; };
 		6863ADC32A02B98000446A13 /* FCVideoListInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6863ADC22A02B98000446A13 /* FCVideoListInfo.swift */; };
@@ -25,7 +25,6 @@
 		6863ADEF2A07317C00446A13 /* FCVideoCollectionViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6863ADED2A07317C00446A13 /* FCVideoCollectionViewHeader.xib */; };
 		6897334E29F5570B00BC7630 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 6897334D29F5570B00BC7630 /* SnapKit */; };
 		6897335129F5572400BC7630 /* Starscream in Frameworks */ = {isa = PBXBuildFile; productRef = 6897335029F5572400BC7630 /* Starscream */; };
-		6897335429F5574200BC7630 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 6897335329F5574200BC7630 /* SwiftyJSON */; };
 		6897335729F5575200BC7630 /* Gzip in Frameworks */ = {isa = PBXBuildFile; productRef = 6897335629F5575200BC7630 /* Gzip */; };
 		6897335A29F5577200BC7630 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 6897335929F5577200BC7630 /* Kingfisher */; };
 		6897335D29F5578100BC7630 /* MarqueeLabel in Frameworks */ = {isa = PBXBuildFile; productRef = 6897335C29F5578100BC7630 /* MarqueeLabel */; };
@@ -33,7 +32,6 @@
 		6897336329F557AF00BC7630 /* PocketSVG in Frameworks */ = {isa = PBXBuildFile; productRef = 6897336229F557AF00BC7630 /* PocketSVG */; };
 		6897336629F557BF00BC7630 /* CocoaAsyncSocket in Frameworks */ = {isa = PBXBuildFile; productRef = 6897336529F557BF00BC7630 /* CocoaAsyncSocket */; };
 		6897336929F557D700BC7630 /* Swifter in Frameworks */ = {isa = PBXBuildFile; productRef = 6897336829F557D700BC7630 /* Swifter */; };
-		6897336C29F557EC00BC7630 /* SwiftyXMLParser in Frameworks */ = {isa = PBXBuildFile; productRef = 6897336B29F557EC00BC7630 /* SwiftyXMLParser */; };
 		6897336F29F5582100BC7630 /* CocoaLumberjack in Frameworks */ = {isa = PBXBuildFile; productRef = 6897336E29F5582100BC7630 /* CocoaLumberjack */; };
 		68CE6F1C29F3D47700DBE8F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68CE6F1629F3D47700DBE8F6 /* Assets.xcassets */; };
 		68CE6F1D29F3D47700DBE8F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68CE6F1729F3D47700DBE8F6 /* LaunchScreen.storyboard */; };
@@ -41,14 +39,12 @@
 		68CE6F3229F3D64C00DBE8F6 /* FCLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CE6F3029F3D64C00DBE8F6 /* FCLoginViewController.swift */; };
 		68CE6F3329F3D64C00DBE8F6 /* FCLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68CE6F3129F3D64C00DBE8F6 /* FCLoginViewController.xib */; };
 		68CE6F4529F3E91100DBE8F6 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 68CE6F4429F3E91100DBE8F6 /* Alamofire */; };
-		68E7C59F29FAC176004D94CF /* FCHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E7C59D29FAC176004D94CF /* FCHomeViewController.swift */; };
-		68E7C5A029FAC176004D94CF /* FCHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68E7C59E29FAC176004D94CF /* FCHomeViewController.xib */; };
 		68E7C5A52A02A182004D94CF /* FCFileListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E7C5A32A02A182004D94CF /* FCFileListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6809231F29F3F4C300A4A8BC /* FCHomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCHomeCollectionViewCell.swift; sourceTree = "<group>"; };
-		6809232029F3F4C300A4A8BC /* FCHomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FCHomeCollectionViewCell.xib; sourceTree = "<group>"; };
+		68488A3A2A0783C8003C64DF /* FCPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCPlayerViewController.swift; sourceTree = "<group>"; };
+		68488A3B2A0783C8003C64DF /* FCPlayerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FCPlayerViewController.xib; sourceTree = "<group>"; };
 		6863ADBF2A02AC1800446A13 /* FCFileListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FCFileListViewController.xib; sourceTree = "<group>"; };
 		6863ADC22A02B98000446A13 /* FCVideoListInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCVideoListInfo.swift; sourceTree = "<group>"; };
 		6863ADCE2A03DCA300446A13 /* FCQRBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FCQRBuilder.swift; sourceTree = "<group>"; };
@@ -68,8 +64,6 @@
 		68CE6F1B29F3D47700DBE8F6 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		68CE6F3029F3D64C00DBE8F6 /* FCLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCLoginViewController.swift; sourceTree = "<group>"; };
 		68CE6F3129F3D64C00DBE8F6 /* FCLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FCLoginViewController.xib; sourceTree = "<group>"; };
-		68E7C59D29FAC176004D94CF /* FCHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCHomeViewController.swift; sourceTree = "<group>"; };
-		68E7C59E29FAC176004D94CF /* FCHomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FCHomeViewController.xib; sourceTree = "<group>"; };
 		68E7C5A32A02A182004D94CF /* FCFileListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCFileListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,12 +79,10 @@
 				6897336329F557AF00BC7630 /* PocketSVG in Frameworks */,
 				6897336929F557D700BC7630 /* Swifter in Frameworks */,
 				6897335729F5575200BC7630 /* Gzip in Frameworks */,
-				6897336C29F557EC00BC7630 /* SwiftyXMLParser in Frameworks */,
 				6897335D29F5578100BC7630 /* MarqueeLabel in Frameworks */,
 				6897336F29F5582100BC7630 /* CocoaLumberjack in Frameworks */,
 				6897334E29F5570B00BC7630 /* SnapKit in Frameworks */,
 				6850333E29FAA4E1000CEEB5 /* HandyJSON in Frameworks */,
-				6897335429F5574200BC7630 /* SwiftyJSON in Frameworks */,
 				6897335129F5572400BC7630 /* Starscream in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -98,15 +90,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6809231E29F3F49C00A4A8BC /* View */ = {
-			isa = PBXGroup;
-			children = (
-				6809231F29F3F4C300A4A8BC /* FCHomeCollectionViewCell.swift */,
-				6809232029F3F4C300A4A8BC /* FCHomeCollectionViewCell.xib */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		6863ADC12A02AC3800446A13 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -233,6 +216,23 @@
 			path = Vendor;
 			sourceTree = "<group>";
 		};
+		6863ADF22A07835700446A13 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				6863ADF32A07836000446A13 /* ViewController */,
+			);
+			path = Player;
+			sourceTree = "<group>";
+		};
+		6863ADF32A07836000446A13 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				68488A3A2A0783C8003C64DF /* FCPlayerViewController.swift */,
+				68488A3B2A0783C8003C64DF /* FCPlayerViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		68CE6EF729F3D42C00DBE8F6 = {
 			isa = PBXGroup;
 			children = (
@@ -265,8 +265,8 @@
 		68CE6F2229F3D5BC00DBE8F6 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
+				6863ADF22A07835700446A13 /* Player */,
 				68E7C5A129FAC195004D94CF /* FileList */,
-				68CE6F2F29F3D62600DBE8F6 /* Home */,
 				68CE6F2E29F3D61F00DBE8F6 /* Login */,
 			);
 			path = Pages;
@@ -290,29 +290,11 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
-		68CE6F2F29F3D62600DBE8F6 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				6809231E29F3F49C00A4A8BC /* View */,
-				68CE6F3B29F3DD1800DBE8F6 /* ViewController */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
 		68CE6F3429F3D65300DBE8F6 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
 				68CE6F3029F3D64C00DBE8F6 /* FCLoginViewController.swift */,
 				68CE6F3129F3D64C00DBE8F6 /* FCLoginViewController.xib */,
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
-		68CE6F3B29F3DD1800DBE8F6 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				68E7C59D29FAC176004D94CF /* FCHomeViewController.swift */,
-				68E7C59E29FAC176004D94CF /* FCHomeViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -356,7 +338,6 @@
 				68CE6F4429F3E91100DBE8F6 /* Alamofire */,
 				6897334D29F5570B00BC7630 /* SnapKit */,
 				6897335029F5572400BC7630 /* Starscream */,
-				6897335329F5574200BC7630 /* SwiftyJSON */,
 				6897335629F5575200BC7630 /* Gzip */,
 				6897335929F5577200BC7630 /* Kingfisher */,
 				6897335C29F5578100BC7630 /* MarqueeLabel */,
@@ -364,7 +345,6 @@
 				6897336229F557AF00BC7630 /* PocketSVG */,
 				6897336529F557BF00BC7630 /* CocoaAsyncSocket */,
 				6897336829F557D700BC7630 /* Swifter */,
-				6897336B29F557EC00BC7630 /* SwiftyXMLParser */,
 				6897336E29F5582100BC7630 /* CocoaLumberjack */,
 				6850333D29FAA4E1000CEEB5 /* HandyJSON */,
 			);
@@ -400,7 +380,6 @@
 				68CE6F4329F3E91100DBE8F6 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				6897334C29F5570B00BC7630 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				6897334F29F5572400BC7630 /* XCRemoteSwiftPackageReference "Starscream" */,
-				6897335229F5574200BC7630 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 				6897335529F5575200BC7630 /* XCRemoteSwiftPackageReference "GzipSwift" */,
 				6897335829F5577200BC7630 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				6897335B29F5578100BC7630 /* XCRemoteSwiftPackageReference "MarqueeLabel" */,
@@ -408,7 +387,6 @@
 				6897336129F557AF00BC7630 /* XCRemoteSwiftPackageReference "PocketSVG" */,
 				6897336429F557BF00BC7630 /* XCRemoteSwiftPackageReference "CocoaAsyncSocket" */,
 				6897336729F557D700BC7630 /* XCRemoteSwiftPackageReference "swifter" */,
-				6897336A29F557EC00BC7630 /* XCRemoteSwiftPackageReference "SwiftyXMLParser" */,
 				6897336D29F5582100BC7630 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */,
 				6850333C29FAA4E1000CEEB5 /* XCRemoteSwiftPackageReference "HandyJSON" */,
 			);
@@ -428,9 +406,8 @@
 			files = (
 				6863ADEF2A07317C00446A13 /* FCVideoCollectionViewHeader.xib in Resources */,
 				68CE6F1C29F3D47700DBE8F6 /* Assets.xcassets in Resources */,
+				68488A3D2A0783C8003C64DF /* FCPlayerViewController.xib in Resources */,
 				6863ADDE2A052EA900446A13 /* FCVideoItemCell.xib in Resources */,
-				6809232229F3F4C300A4A8BC /* FCHomeCollectionViewCell.xib in Resources */,
-				68E7C5A029FAC176004D94CF /* FCHomeViewController.xib in Resources */,
 				6863ADC02A02AC1800446A13 /* FCFileListViewController.xib in Resources */,
 				68CE6F1D29F3D47700DBE8F6 /* LaunchScreen.storyboard in Resources */,
 				68CE6F3329F3D64C00DBE8F6 /* FCLoginViewController.xib in Resources */,
@@ -444,11 +421,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6809232129F3F4C300A4A8BC /* FCHomeCollectionViewCell.swift in Sources */,
 				6863ADDD2A052EA900446A13 /* FCVideoItemCell.swift in Sources */,
 				6863ADE52A053EBC00446A13 /* UIViewController+Ext.swift in Sources */,
 				6863ADE02A053BDF00446A13 /* FCConstant.swift in Sources */,
 				6863ADE32A053E6000446A13 /* FCLoginManager.swift in Sources */,
+				68488A3C2A0783C8003C64DF /* FCPlayerViewController.swift in Sources */,
 				6863ADD72A03DCA300446A13 /* FCDeviceCodeInfo.swift in Sources */,
 				6863ADD62A03DCA300446A13 /* FCNetworkUtil.swift in Sources */,
 				6863ADEE2A07317C00446A13 /* FCVideoCollectionViewHeader.swift in Sources */,
@@ -456,7 +433,6 @@
 				68CE6F1F29F3D47700DBE8F6 /* AppDelegate.swift in Sources */,
 				68CE6F3229F3D64C00DBE8F6 /* FCLoginViewController.swift in Sources */,
 				6863ADD92A03DFF100446A13 /* DataConverter.swift in Sources */,
-				68E7C59F29FAC176004D94CF /* FCHomeViewController.swift in Sources */,
 				6863ADC32A02B98000446A13 /* FCVideoListInfo.swift in Sources */,
 				6863ADD52A03DCA300446A13 /* FCQRBuilder.swift in Sources */,
 			);
@@ -686,14 +662,6 @@
 				minimumVersion = 4.0.0;
 			};
 		};
-		6897335229F5574200BC7630 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
 		6897335529F5575200BC7630 /* XCRemoteSwiftPackageReference "GzipSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/1024jp/GzipSwift";
@@ -750,14 +718,6 @@
 				kind = branch;
 			};
 		};
-		6897336A29F557EC00BC7630 /* XCRemoteSwiftPackageReference "SwiftyXMLParser" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/yahoojapan/SwiftyXMLParser";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
-			};
-		};
 		6897336D29F5582100BC7630 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/CocoaLumberjack/CocoaLumberjack.git";
@@ -791,11 +751,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 6897334F29F5572400BC7630 /* XCRemoteSwiftPackageReference "Starscream" */;
 			productName = Starscream;
-		};
-		6897335329F5574200BC7630 /* SwiftyJSON */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 6897335229F5574200BC7630 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
-			productName = SwiftyJSON;
 		};
 		6897335629F5575200BC7630 /* Gzip */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -831,11 +786,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 6897336729F557D700BC7630 /* XCRemoteSwiftPackageReference "swifter" */;
 			productName = Swifter;
-		};
-		6897336B29F557EC00BC7630 /* SwiftyXMLParser */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 6897336A29F557EC00BC7630 /* XCRemoteSwiftPackageReference "SwiftyXMLParser" */;
-			productName = SwiftyXMLParser;
 		};
 		6897336E29F5582100BC7630 /* CocoaLumberjack */ = {
 			isa = XCSwiftPackageProductDependency;

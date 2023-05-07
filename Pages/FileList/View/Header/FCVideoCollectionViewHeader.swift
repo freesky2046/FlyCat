@@ -10,8 +10,9 @@ import UIKit
 class FCVideoCollectionViewHeader: UICollectionReusableView {
     @IBOutlet weak var leftLabel: UILabel!
     
-    override class func awakeFromNib() {
+    override func awakeFromNib() {
         super.awakeFromNib()
-        print(self)
+        leftLabel.font = UIFont.systemFont(ofSize: FCConstant.headline, weight: .medium)
+        leftLabel.backgroundColor = UIColor.clear
     }
 }

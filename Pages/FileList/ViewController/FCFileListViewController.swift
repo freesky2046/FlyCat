@@ -47,7 +47,7 @@ class FCFileListViewController: UIViewController,UICollectionViewDelegate,UIColl
     func refreshFileList() {
         var p:Parameters = [:];
         p["method"] = "list";
-        p["parent_path"] = parent_path;
+        p["dir"] = parent_path;
         p["web"] = 1;
         FCNetworkUtil.request("https://pan.baidu.com/rest/2.0/xpan/file", parameters: p) {[weak self] res in
             switch res {
@@ -136,18 +136,21 @@ class FCFileListViewController: UIViewController,UICollectionViewDelegate,UIColl
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let nextList = FCFileListViewController.build()
         let info:FCVideoListInfo = self.dataArray![indexPath.row]
-        if info.path != nil {
-            nextList?.parent_path = info.path!
+        if info.isdir != nil && info.isdir == 1 {
+            if let path = info.path  { nextList?.parent_path = path }
+            if let filename = info.server_filename { nextList?.parent_name = filename}
+            self.navigationController?.pushViewController(nextList!, animated: true)
         }
-        self.navigationController?.pushViewController(nextList!, animated: true)
+        else if info.isdir != nil && info.category != nil && info.isdir == 0 && info.category == 1 {
+            
+        }
+     
     }
  
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "FCVideoCollectionViewHeader", for: indexPath) as! FCVideoCollectionViewHeader
         // 更新标题
-        print(headerView)
-        headerView.leftLabel.font = UIFont.systemFont(ofSize: FCConstant.headline, weight: .medium)
-        headerView.leftLabel.backgroundColor = UIColor.clear
+
         headerView.leftLabel.text = parent_name
         return headerView
     }

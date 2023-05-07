@@ -28,7 +28,7 @@
                 <constraint firstItem="uU4-qv-ffJ" firstAttribute="top" secondItem="7wu-8X-Iab" secondAttribute="top" id="osW-T4-aL8"/>
             </constraints>
             <connections>
-                <outlet property="leftLabel" destination="uU4-qv-ffJ" id="d0X-9D-ecj"/>
+                <outlet property="leftLabel" destination="uU4-qv-ffJ" id="8Qr-zs-41a"/>
             </connections>
             <point key="canvasLocation" x="116" y="-26"/>
         </collectionReusableView>

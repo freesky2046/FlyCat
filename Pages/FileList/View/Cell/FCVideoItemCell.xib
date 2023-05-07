@@ -17,7 +17,18 @@
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XIS-tA-rLb" userLabel="FolderContainer">
                         <rect key="frame" x="0.0" y="0.0" width="160" height="107"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ov3-Cr-nDM">
+                                <rect key="frame" x="0.0" y="0.0" width="160" height="107"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Ov3-Cr-nDM" firstAttribute="top" secondItem="XIS-tA-rLb" secondAttribute="top" id="45E-93-Key"/>
+                            <constraint firstAttribute="trailing" secondItem="Ov3-Cr-nDM" secondAttribute="trailing" id="AFf-Qt-d8d"/>
+                            <constraint firstAttribute="bottom" secondItem="Ov3-Cr-nDM" secondAttribute="bottom" id="g9a-QP-BXm"/>
+                            <constraint firstItem="Ov3-Cr-nDM" firstAttribute="leading" secondItem="XIS-tA-rLb" secondAttribute="leading" id="s8K-kH-LIV"/>
+                        </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4cG-o7-8EX" userLabel="VideoContainer">
                         <rect key="frame" x="0.0" y="0.0" width="160" height="107"/>
@@ -49,6 +60,7 @@
             <size key="customSize" width="160" height="107"/>
             <connections>
                 <outlet property="folderContainer" destination="XIS-tA-rLb" id="Dq8-WW-rWU"/>
+                <outlet property="folderImageView" destination="Ov3-Cr-nDM" id="ge4-RB-UXe"/>
                 <outlet property="videoContainer" destination="4cG-o7-8EX" id="BdV-vW-QlJ"/>
                 <outlet property="videoImageView" destination="TpI-Om-v3V" id="1ox-cw-JlI"/>
             </connections>

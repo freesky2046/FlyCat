@@ -19,6 +19,7 @@ struct FCNetworkSecret {
 struct FCUrl {
     static let deviceCode = "https://openapi.baidu.com/oauth/2.0/device/code"
     static let getToken = "https://openapi.baidu.com/oauth/2.0/token"
+    static let getPanFile = "https://openapi.baidu.com/rest/2.0/xpan/file"
 }
 
 struct LoginToken: Codable {
