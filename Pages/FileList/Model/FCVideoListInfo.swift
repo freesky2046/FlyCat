@@ -9,10 +9,10 @@ import UIKit
 import HandyJSON
 
 class FCThumbs: HandyJSON {
-    var icon:String?
-    var url3:String?
-    var url2:String?
-    var url1:String?
+    var icon:String?    // 60 * 60
+    var url3:String?    // 850 * 580
+    var url2:String?    // 360 * 270
+    var url1:String?    // 140 * 90
     required init() {}
 }
 
@@ -70,6 +70,7 @@ class FCVideoListInfo : HandyJSON {
     var server_filename:String?
     var owner_id:Int?
     var unlist:Int?
+    var thumbs:FCThumbs?
     required init() {}
 }
 
@@ -81,3 +82,4 @@ class FCVideoListInfoRes: HandyJSON {
     var guid:Int?
     required init() {}
 }
+

@@ -19,6 +19,10 @@
 		6863ADDD2A052EA900446A13 /* FCVideoItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6863ADDB2A052EA900446A13 /* FCVideoItemCell.swift */; };
 		6863ADDE2A052EA900446A13 /* FCVideoItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6863ADDC2A052EA900446A13 /* FCVideoItemCell.xib */; };
 		6863ADE02A053BDF00446A13 /* FCConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6863ADDF2A053BDF00446A13 /* FCConstant.swift */; };
+		6863ADE32A053E6000446A13 /* FCLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6863ADE22A053E6000446A13 /* FCLoginManager.swift */; };
+		6863ADE52A053EBC00446A13 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6863ADE42A053EBC00446A13 /* UIViewController+Ext.swift */; };
+		6863ADEE2A07317C00446A13 /* FCVideoCollectionViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6863ADEC2A07317C00446A13 /* FCVideoCollectionViewHeader.swift */; };
+		6863ADEF2A07317C00446A13 /* FCVideoCollectionViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6863ADED2A07317C00446A13 /* FCVideoCollectionViewHeader.xib */; };
 		6897334E29F5570B00BC7630 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 6897334D29F5570B00BC7630 /* SnapKit */; };
 		6897335129F5572400BC7630 /* Starscream in Frameworks */ = {isa = PBXBuildFile; productRef = 6897335029F5572400BC7630 /* Starscream */; };
 		6897335429F5574200BC7630 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 6897335329F5574200BC7630 /* SwiftyJSON */; };
@@ -54,6 +58,10 @@
 		6863ADDB2A052EA900446A13 /* FCVideoItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCVideoItemCell.swift; sourceTree = "<group>"; };
 		6863ADDC2A052EA900446A13 /* FCVideoItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FCVideoItemCell.xib; sourceTree = "<group>"; };
 		6863ADDF2A053BDF00446A13 /* FCConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCConstant.swift; sourceTree = "<group>"; };
+		6863ADE22A053E6000446A13 /* FCLoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCLoginManager.swift; sourceTree = "<group>"; };
+		6863ADE42A053EBC00446A13 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
+		6863ADEC2A07317C00446A13 /* FCVideoCollectionViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCVideoCollectionViewHeader.swift; sourceTree = "<group>"; };
+		6863ADED2A07317C00446A13 /* FCVideoCollectionViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FCVideoCollectionViewHeader.xib; sourceTree = "<group>"; };
 		68CE6F0029F3D42C00DBE8F6 /* FlyCat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlyCat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68CE6F1629F3D47700DBE8F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		68CE6F1829F3D47700DBE8F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -120,6 +128,7 @@
 		6863ADC82A03DCA300446A13 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				6863ADE42A053EBC00446A13 /* UIViewController+Ext.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -185,15 +194,49 @@
 		6863ADDA2A052E3800446A13 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6863ADEB2A072F2700446A13 /* Header */,
+				6863ADEA2A072F1B00446A13 /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6863ADE12A053E4100446A13 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				6863ADE22A053E6000446A13 /* FCLoginManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		6863ADEA2A072F1B00446A13 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
 				6863ADDB2A052EA900446A13 /* FCVideoItemCell.swift */,
 				6863ADDC2A052EA900446A13 /* FCVideoItemCell.xib */,
 			);
-			path = View;
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		6863ADEB2A072F2700446A13 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				6863ADEC2A07317C00446A13 /* FCVideoCollectionViewHeader.swift */,
+				6863ADED2A07317C00446A13 /* FCVideoCollectionViewHeader.xib */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		6863ADF12A07403E00446A13 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Vendor;
 			sourceTree = "<group>";
 		};
 		68CE6EF729F3D42C00DBE8F6 = {
 			isa = PBXGroup;
 			children = (
+				6863ADF12A07403E00446A13 /* Vendor */,
 				68CE6F2629F3D5C400DBE8F6 /* Base */,
 				68CE6F2229F3D5BC00DBE8F6 /* Pages */,
 				68CE6F1529F3D47700DBE8F6 /* Support */,
@@ -241,6 +284,7 @@
 		68CE6F2E29F3D61F00DBE8F6 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				6863ADE12A053E4100446A13 /* Manager */,
 				68CE6F3429F3D65300DBE8F6 /* ViewController */,
 			);
 			path = Login;
@@ -286,8 +330,8 @@
 		68E7C5A72A02ABE3004D94CF /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				6863ADBF2A02AC1800446A13 /* FCFileListViewController.xib */,
 				68E7C5A32A02A182004D94CF /* FCFileListViewController.swift */,
+				6863ADBF2A02AC1800446A13 /* FCFileListViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -382,6 +426,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6863ADEF2A07317C00446A13 /* FCVideoCollectionViewHeader.xib in Resources */,
 				68CE6F1C29F3D47700DBE8F6 /* Assets.xcassets in Resources */,
 				6863ADDE2A052EA900446A13 /* FCVideoItemCell.xib in Resources */,
 				6809232229F3F4C300A4A8BC /* FCHomeCollectionViewCell.xib in Resources */,
@@ -401,9 +446,12 @@
 			files = (
 				6809232129F3F4C300A4A8BC /* FCHomeCollectionViewCell.swift in Sources */,
 				6863ADDD2A052EA900446A13 /* FCVideoItemCell.swift in Sources */,
+				6863ADE52A053EBC00446A13 /* UIViewController+Ext.swift in Sources */,
 				6863ADE02A053BDF00446A13 /* FCConstant.swift in Sources */,
+				6863ADE32A053E6000446A13 /* FCLoginManager.swift in Sources */,
 				6863ADD72A03DCA300446A13 /* FCDeviceCodeInfo.swift in Sources */,
 				6863ADD62A03DCA300446A13 /* FCNetworkUtil.swift in Sources */,
+				6863ADEE2A07317C00446A13 /* FCVideoCollectionViewHeader.swift in Sources */,
 				68E7C5A52A02A182004D94CF /* FCFileListViewController.swift in Sources */,
 				68CE6F1F29F3D47700DBE8F6 /* AppDelegate.swift in Sources */,
 				68CE6F3229F3D64C00DBE8F6 /* FCLoginViewController.swift in Sources */,

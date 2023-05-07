@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.XIB" version="3.0" toolsVersion="21507" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="appleTV" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="FCVideoItemCell" id="Rz2-K0-ksD" customClass="FCVideoItemCell" customModule="FlyCat" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="160" height="107"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="160" height="107"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XIS-tA-rLb" userLabel="FolderContainer">
+                        <rect key="frame" x="0.0" y="0.0" width="160" height="107"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4cG-o7-8EX" userLabel="VideoContainer">
+                        <rect key="frame" x="0.0" y="0.0" width="160" height="107"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TpI-Om-v3V">
+                                <rect key="frame" x="0.0" y="0.0" width="160" height="107"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="TpI-Om-v3V" firstAttribute="top" secondItem="4cG-o7-8EX" secondAttribute="top" id="3ZY-xN-IOb"/>
+                            <constraint firstAttribute="bottom" secondItem="TpI-Om-v3V" secondAttribute="bottom" id="DfH-ud-pGD"/>
+                            <constraint firstItem="TpI-Om-v3V" firstAttribute="leading" secondItem="4cG-o7-8EX" secondAttribute="leading" id="J4E-NW-yfF"/>
+                            <constraint firstAttribute="trailing" secondItem="TpI-Om-v3V" secondAttribute="trailing" id="fu1-4e-bYl"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="4cG-o7-8EX" firstAttribute="top" secondItem="Rz2-K0-ksD" secondAttribute="top" id="06l-SU-oIa"/>
+                <constraint firstAttribute="bottom" secondItem="4cG-o7-8EX" secondAttribute="bottom" id="0cv-4B-Y16"/>
+                <constraint firstItem="4cG-o7-8EX" firstAttribute="leading" secondItem="Rz2-K0-ksD" secondAttribute="leading" id="9KI-Oy-eHT"/>
+                <constraint firstAttribute="bottom" secondItem="XIS-tA-rLb" secondAttribute="bottom" id="Lbk-kY-LMk"/>
+                <constraint firstAttribute="trailing" secondItem="XIS-tA-rLb" secondAttribute="trailing" id="Wii-qH-WHU"/>
+                <constraint firstItem="XIS-tA-rLb" firstAttribute="top" secondItem="Rz2-K0-ksD" secondAttribute="top" id="gK8-ed-j4e"/>
+                <constraint firstItem="XIS-tA-rLb" firstAttribute="leading" secondItem="Rz2-K0-ksD" secondAttribute="leading" id="hyZ-tf-RKp"/>
+                <constraint firstAttribute="trailing" secondItem="4cG-o7-8EX" secondAttribute="trailing" id="srz-LM-3zi"/>
+            </constraints>
+            <size key="customSize" width="160" height="107"/>
+            <connections>
+                <outlet property="folderContainer" destination="XIS-tA-rLb" id="Dq8-WW-rWU"/>
+                <outlet property="videoContainer" destination="4cG-o7-8EX" id="BdV-vW-QlJ"/>
+                <outlet property="videoImageView" destination="TpI-Om-v3V" id="1ox-cw-JlI"/>
+            </connections>
+            <point key="canvasLocation" x="-182" y="-83.5"/>
+        </collectionViewCell>
+    </objects>
+</document>

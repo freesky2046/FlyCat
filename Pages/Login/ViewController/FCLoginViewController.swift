@@ -31,7 +31,7 @@ class FCLoginViewController: UIViewController {
         destroyTimer()
     }
     
-    static func build() -> FCLoginViewController? {
+    static func build() -> FCLoginViewController {
         let vc = FCLoginViewController(nibName: "FCLoginViewController", bundle: nil);
         return vc
     }
