@@ -21,6 +21,6 @@ class FCPlayerInfo: HandyJSON {
     var request_id:String?
     var adTime:Int?
     var adToken:String?
-    var ltime:Int?
+    var ltime:Double?
     required init() {}
 }

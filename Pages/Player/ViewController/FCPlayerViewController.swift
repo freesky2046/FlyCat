@@ -47,17 +47,16 @@ class FCPlayerViewController: UIViewController {
                     let playerInfo =  FCPlayerInfo.deserialize(from: data);
                     if self?.stage == 1  && playerInfo != nil {
                         if let errno = playerInfo!.errno {
-                            if(errno == 0) {
+                            if(errno == 0 || errno == 133) {
                                 self?.stage = 2
                                 self?.adToken = playerInfo?.adToken;
-                                
-                                var delayInSeconds = 3;
+                                var delayInSeconds = 3.0;
                                 if let ltime = playerInfo?.ltime {
                                     delayInSeconds = ltime
                                 }
-//                                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + delayInSeconds) {
+                                DispatchQueue.main.asyncAfter(deadline: .now() + delayInSeconds) {
                                     self?.refreshPlayerInfo()
-//                                }
+                                }
                                 return
                             }
                         }
