@@ -33,7 +33,7 @@ struct FCConstant {
         var str:String = String()
         let name = appName()
         let version = appVersion()
-        str = "xpanvideo; \(name); \(version);\(sysName);\(sysVersion)"
+        str = "xpanvideo;\(name);\(version);\(sysName);\(sysVersion);ts"
         return str
     }
 }

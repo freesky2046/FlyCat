@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		68357B552A094C30008AE463 /* FCPlayerInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68357B542A094C30008AE463 /* FCPlayerInfo.swift */; };
 		68488A3C2A0783C8003C64DF /* FCPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68488A3A2A0783C8003C64DF /* FCPlayerViewController.swift */; };
 		68488A3D2A0783C8003C64DF /* FCPlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68488A3B2A0783C8003C64DF /* FCPlayerViewController.xib */; };
 		6850333E29FAA4E1000CEEB5 /* HandyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 6850333D29FAA4E1000CEEB5 /* HandyJSON */; };
@@ -43,6 +44,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		68357B542A094C30008AE463 /* FCPlayerInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCPlayerInfo.swift; sourceTree = "<group>"; };
 		68488A3A2A0783C8003C64DF /* FCPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCPlayerViewController.swift; sourceTree = "<group>"; };
 		68488A3B2A0783C8003C64DF /* FCPlayerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FCPlayerViewController.xib; sourceTree = "<group>"; };
 		6863ADBF2A02AC1800446A13 /* FCFileListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FCFileListViewController.xib; sourceTree = "<group>"; };
@@ -90,6 +92,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		68357B532A094B9C008AE463 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				68357B542A094C30008AE463 /* FCPlayerInfo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		6863ADC12A02AC3800446A13 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,6 +229,7 @@
 		6863ADF22A07835700446A13 /* Player */ = {
 			isa = PBXGroup;
 			children = (
+				68357B532A094B9C008AE463 /* Model */,
 				6863ADF32A07836000446A13 /* ViewController */,
 			);
 			path = Player;
@@ -421,6 +432,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68357B552A094C30008AE463 /* FCPlayerInfo.swift in Sources */,
 				6863ADDD2A052EA900446A13 /* FCVideoItemCell.swift in Sources */,
 				6863ADE52A053EBC00446A13 /* UIViewController+Ext.swift in Sources */,
 				6863ADE02A053BDF00446A13 /* FCConstant.swift in Sources */,

@@ -19,7 +19,7 @@ struct FCNetworkSecret {
 struct FCUrl {
     static let deviceCode = "https://openapi.baidu.com/oauth/2.0/device/code"
     static let getToken = "https://openapi.baidu.com/oauth/2.0/token"
-    static let getPanFile = "https://openapi.baidu.com/rest/2.0/xpan/file"
+    static let getPanFile = "https://pan.baidu.com/rest/2.0/xpan/file"
 }
 
 struct LoginToken: Codable {
@@ -52,7 +52,6 @@ class FCNetworkUtil  {
         }
         p["client_id"] = FCNetworkSecret.appKey;
         p["scope"] = FCNetworkSecret.scope;
-
         AF.request(url, method: method, parameters: p, encoding: encoding, headers: headers, interceptor: nil, requestModifier: nil).responseString { response in
             switch response.result {
             case .success(let data):

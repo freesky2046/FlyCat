@@ -134,15 +134,17 @@ class FCFileListViewController: UIViewController,UICollectionViewDelegate,UIColl
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let nextList = FCFileListViewController.build()
         let info:FCVideoListInfo = self.dataArray![indexPath.row]
         if info.isdir != nil && info.isdir == 1 {
+            let nextList = FCFileListViewController.build()
             if let path = info.path  { nextList?.parent_path = path }
             if let filename = info.server_filename { nextList?.parent_name = filename}
             self.navigationController?.pushViewController(nextList!, animated: true)
         }
         else if info.isdir != nil && info.category != nil && info.isdir == 0 && info.category == 1 {
-            
+            let playerVC = FCPlayerViewController.build()
+            playerVC.path = info.path
+            self.navigationController?.pushViewController(playerVC, animated: true)
         }
      
     }
