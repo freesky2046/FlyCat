@@ -219,13 +219,6 @@
 			path = Header;
 			sourceTree = "<group>";
 		};
-		6863ADF12A07403E00446A13 /* Vendor */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Vendor;
-			sourceTree = "<group>";
-		};
 		6863ADF22A07835700446A13 /* Player */ = {
 			isa = PBXGroup;
 			children = (
@@ -247,7 +240,6 @@
 		68CE6EF729F3D42C00DBE8F6 = {
 			isa = PBXGroup;
 			children = (
-				6863ADF12A07403E00446A13 /* Vendor */,
 				68CE6F2629F3D5C400DBE8F6 /* Base */,
 				68CE6F2229F3D5BC00DBE8F6 /* Pages */,
 				68CE6F1529F3D47700DBE8F6 /* Support */,
@@ -599,6 +591,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 14.0;
 			};
 			name = Debug;
 		};
@@ -623,6 +616,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 14.0;
 			};
 			name = Release;
 		};
