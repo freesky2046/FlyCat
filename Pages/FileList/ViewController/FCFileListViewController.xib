@@ -18,21 +18,21 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="kc8-ke-huP">
-                    <rect key="frame" x="90" y="60" width="1740" height="960"/>
+                    <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="V0I-2z-wKJ">
                         <size key="itemSize" width="128" height="128"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <inset key="sectionInset" minX="90" minY="60" maxX="90" maxY="60"/>
                     </collectionViewFlowLayout>
                 </collectionView>
             </subviews>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="kc8-ke-huP" secondAttribute="bottom" constant="60" id="SlA-2D-Syg"/>
-                <constraint firstItem="kc8-ke-huP" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="90" id="TjY-SN-5K1"/>
-                <constraint firstItem="kc8-ke-huP" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="60" id="VIc-UJ-1b7"/>
-                <constraint firstAttribute="trailing" secondItem="kc8-ke-huP" secondAttribute="trailing" constant="90" id="YRR-Gw-qV4"/>
+                <constraint firstAttribute="trailing" secondItem="kc8-ke-huP" secondAttribute="trailing" id="98R-2A-P6N"/>
+                <constraint firstAttribute="bottom" secondItem="kc8-ke-huP" secondAttribute="bottom" id="9yM-uB-HXi"/>
+                <constraint firstItem="kc8-ke-huP" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Ewc-NR-nZw"/>
+                <constraint firstItem="kc8-ke-huP" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="HQp-Dc-n88"/>
             </constraints>
             <point key="canvasLocation" x="148" y="-25"/>
         </view>
