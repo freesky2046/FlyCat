@@ -61,6 +61,8 @@ class FCPlayerViewController: UIViewController {
                             }
                         }
                     }
+            
+                    
                 case .failure(let error):
                     print(error)
                     
@@ -80,4 +82,6 @@ class FCPlayerViewController: UIViewController {
     func waiting() {
         print("轮询转码")
     }
+    
+
 }

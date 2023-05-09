@@ -159,6 +159,6 @@ class FCFileListViewController: UIViewController,UICollectionViewDelegate,UIColl
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
     
-        return CGSize(width: FCConstant.screenWidth, height: 66)
+        return CGSize(width: FCConstant.screenWidth - 90 * 2, height: 66)
     }
 }
