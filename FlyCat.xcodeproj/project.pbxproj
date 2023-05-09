@@ -33,7 +33,6 @@
 		6897336329F557AF00BC7630 /* PocketSVG in Frameworks */ = {isa = PBXBuildFile; productRef = 6897336229F557AF00BC7630 /* PocketSVG */; };
 		6897336629F557BF00BC7630 /* CocoaAsyncSocket in Frameworks */ = {isa = PBXBuildFile; productRef = 6897336529F557BF00BC7630 /* CocoaAsyncSocket */; };
 		6897336929F557D700BC7630 /* Swifter in Frameworks */ = {isa = PBXBuildFile; productRef = 6897336829F557D700BC7630 /* Swifter */; };
-		6897336F29F5582100BC7630 /* CocoaLumberjack in Frameworks */ = {isa = PBXBuildFile; productRef = 6897336E29F5582100BC7630 /* CocoaLumberjack */; };
 		68CE6F1C29F3D47700DBE8F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68CE6F1629F3D47700DBE8F6 /* Assets.xcassets */; };
 		68CE6F1D29F3D47700DBE8F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68CE6F1729F3D47700DBE8F6 /* LaunchScreen.storyboard */; };
 		68CE6F1F29F3D47700DBE8F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CE6F1B29F3D47700DBE8F6 /* AppDelegate.swift */; };
@@ -41,6 +40,7 @@
 		68CE6F3329F3D64C00DBE8F6 /* FCLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68CE6F3129F3D64C00DBE8F6 /* FCLoginViewController.xib */; };
 		68CE6F4529F3E91100DBE8F6 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 68CE6F4429F3E91100DBE8F6 /* Alamofire */; };
 		68E7C5A52A02A182004D94CF /* FCFileListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E7C5A32A02A182004D94CF /* FCFileListViewController.swift */; };
+		86DE821A2A09D9BF006FF362 /* ProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 86DE82192A09D9BF006FF362 /* ProgressHUD */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,8 +82,8 @@
 				6897336929F557D700BC7630 /* Swifter in Frameworks */,
 				6897335729F5575200BC7630 /* Gzip in Frameworks */,
 				6897335D29F5578100BC7630 /* MarqueeLabel in Frameworks */,
-				6897336F29F5582100BC7630 /* CocoaLumberjack in Frameworks */,
 				6897334E29F5570B00BC7630 /* SnapKit in Frameworks */,
+				86DE821A2A09D9BF006FF362 /* ProgressHUD in Frameworks */,
 				6850333E29FAA4E1000CEEB5 /* HandyJSON in Frameworks */,
 				6897335129F5572400BC7630 /* Starscream in Frameworks */,
 			);
@@ -356,8 +356,8 @@
 				6897336229F557AF00BC7630 /* PocketSVG */,
 				6897336529F557BF00BC7630 /* CocoaAsyncSocket */,
 				6897336829F557D700BC7630 /* Swifter */,
-				6897336E29F5582100BC7630 /* CocoaLumberjack */,
 				6850333D29FAA4E1000CEEB5 /* HandyJSON */,
+				86DE82192A09D9BF006FF362 /* ProgressHUD */,
 			);
 			productName = FlyCat;
 			productReference = 68CE6F0029F3D42C00DBE8F6 /* FlyCat.app */;
@@ -398,8 +398,8 @@
 				6897336129F557AF00BC7630 /* XCRemoteSwiftPackageReference "PocketSVG" */,
 				6897336429F557BF00BC7630 /* XCRemoteSwiftPackageReference "CocoaAsyncSocket" */,
 				6897336729F557D700BC7630 /* XCRemoteSwiftPackageReference "swifter" */,
-				6897336D29F5582100BC7630 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */,
 				6850333C29FAA4E1000CEEB5 /* XCRemoteSwiftPackageReference "HandyJSON" */,
+				86DE82182A09D9BF006FF362 /* XCRemoteSwiftPackageReference "ProgressHUD" */,
 			);
 			productRefGroup = 68CE6F0129F3D42C00DBE8F6 /* Products */;
 			projectDirPath = "";
@@ -730,19 +730,19 @@
 				kind = branch;
 			};
 		};
-		6897336D29F5582100BC7630 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/CocoaLumberjack/CocoaLumberjack.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 3.0.0;
-			};
-		};
 		68CE6F4329F3E91100DBE8F6 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire";
 			requirement = {
 				branch = 5.6.2;
+				kind = branch;
+			};
+		};
+		86DE82182A09D9BF006FF362 /* XCRemoteSwiftPackageReference "ProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/relatedcode/ProgressHUD.git";
+			requirement = {
+				branch = master;
 				kind = branch;
 			};
 		};
@@ -799,15 +799,15 @@
 			package = 6897336729F557D700BC7630 /* XCRemoteSwiftPackageReference "swifter" */;
 			productName = Swifter;
 		};
-		6897336E29F5582100BC7630 /* CocoaLumberjack */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 6897336D29F5582100BC7630 /* XCRemoteSwiftPackageReference "CocoaLumberjack" */;
-			productName = CocoaLumberjack;
-		};
 		68CE6F4429F3E91100DBE8F6 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 68CE6F4329F3E91100DBE8F6 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		86DE82192A09D9BF006FF362 /* ProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 86DE82182A09D9BF006FF362 /* XCRemoteSwiftPackageReference "ProgressHUD" */;
+			productName = ProgressHUD;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
