@@ -73,15 +73,6 @@
       }
     },
     {
-      "identity" : "progresshud",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/relatedcode/ProgressHUD.git",
-      "state" : {
-        "branch" : "master",
-        "revision" : "76e8e739c2ae1bc9b4025ac00faba888e401c06a"
-      }
-    },
-    {
       "identity" : "snapkit",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/SnapKit/SnapKit",
