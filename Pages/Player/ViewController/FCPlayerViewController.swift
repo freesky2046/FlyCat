@@ -9,6 +9,7 @@ import UIKit
 import Alamofire
 import AVKit
 
+
 class FCPlayerViewController: UIViewController {
     public var path:String? = "/"
     public var adToken:String? = ""
@@ -24,6 +25,7 @@ class FCPlayerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {

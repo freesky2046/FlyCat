@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		25AA66B0F3321C7D3940FF6D /* Pods_FlyCat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5785CC4F16D46DC7DB6408C4 /* Pods_FlyCat.framework */; };
 		68357B552A094C30008AE463 /* FCPlayerInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68357B542A094C30008AE463 /* FCPlayerInfo.swift */; };
 		68488A3C2A0783C8003C64DF /* FCPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68488A3A2A0783C8003C64DF /* FCPlayerViewController.swift */; };
 		68488A3D2A0783C8003C64DF /* FCPlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68488A3B2A0783C8003C64DF /* FCPlayerViewController.xib */; };
@@ -43,6 +44,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		39CCCDA6C6FEAB4EEA96CDE5 /* Pods-FlyCat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlyCat.debug.xcconfig"; path = "Target Support Files/Pods-FlyCat/Pods-FlyCat.debug.xcconfig"; sourceTree = "<group>"; };
+		5785CC4F16D46DC7DB6408C4 /* Pods_FlyCat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlyCat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		68357B542A094C30008AE463 /* FCPlayerInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCPlayerInfo.swift; sourceTree = "<group>"; };
 		68488A3A2A0783C8003C64DF /* FCPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCPlayerViewController.swift; sourceTree = "<group>"; };
 		68488A3B2A0783C8003C64DF /* FCPlayerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FCPlayerViewController.xib; sourceTree = "<group>"; };
@@ -66,6 +69,7 @@
 		68CE6F3029F3D64C00DBE8F6 /* FCLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCLoginViewController.swift; sourceTree = "<group>"; };
 		68CE6F3129F3D64C00DBE8F6 /* FCLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FCLoginViewController.xib; sourceTree = "<group>"; };
 		68E7C5A32A02A182004D94CF /* FCFileListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCFileListViewController.swift; sourceTree = "<group>"; };
+		CEC3281DF66A9CEF66BAB81C /* Pods-FlyCat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlyCat.release.xcconfig"; path = "Target Support Files/Pods-FlyCat/Pods-FlyCat.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,12 +88,22 @@
 				6897334E29F5570B00BC7630 /* SnapKit in Frameworks */,
 				6850333E29FAA4E1000CEEB5 /* HandyJSON in Frameworks */,
 				6897335129F5572400BC7630 /* Starscream in Frameworks */,
+				25AA66B0F3321C7D3940FF6D /* Pods_FlyCat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E23E3799020F94164E8810D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				39CCCDA6C6FEAB4EEA96CDE5 /* Pods-FlyCat.debug.xcconfig */,
+				CEC3281DF66A9CEF66BAB81C /* Pods-FlyCat.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		68357B532A094B9C008AE463 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -238,10 +252,13 @@
 		68CE6EF729F3D42C00DBE8F6 = {
 			isa = PBXGroup;
 			children = (
+				68E6FD402A0D25840094F9DB /* Vendor */,
 				68CE6F2629F3D5C400DBE8F6 /* Base */,
 				68CE6F2229F3D5BC00DBE8F6 /* Pages */,
 				68CE6F1529F3D47700DBE8F6 /* Support */,
 				68CE6F0129F3D42C00DBE8F6 /* Products */,
+				5E23E3799020F94164E8810D /* Pods */,
+				E43BE1FB8C44210B02838956 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -300,6 +317,13 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		68E6FD402A0D25840094F9DB /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
 		68E7C5A129FAC195004D94CF /* FileList */ = {
 			isa = PBXGroup;
 			children = (
@@ -319,6 +343,14 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		E43BE1FB8C44210B02838956 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5785CC4F16D46DC7DB6408C4 /* Pods_FlyCat.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -326,9 +358,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 68CE6F1129F3D42D00DBE8F6 /* Build configuration list for PBXNativeTarget "FlyCat" */;
 			buildPhases = (
+				50E5CA2630477FE13E58E49E /* [CP] Check Pods Manifest.lock */,
 				68CE6EFC29F3D42C00DBE8F6 /* Sources */,
 				68CE6EFD29F3D42C00DBE8F6 /* Frameworks */,
 				68CE6EFE29F3D42C00DBE8F6 /* Resources */,
+				00FFDED5A6D303860C9CDC74 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -364,6 +398,7 @@
 				TargetAttributes = {
 					68CE6EFF29F3D42C00DBE8F6 = {
 						CreatedOnToolsVersion = 14.2;
+						LastSwiftMigration = 1420;
 					};
 				};
 			};
@@ -414,6 +449,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		00FFDED5A6D303860C9CDC74 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FlyCat/Pods-FlyCat-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FlyCat/Pods-FlyCat-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FlyCat/Pods-FlyCat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		50E5CA2630477FE13E58E49E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FlyCat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		68CE6EFC29F3D42C00DBE8F6 /* Sources */ = {
@@ -568,9 +645,11 @@
 		};
 		68CE6F1229F3D42D00DBE8F6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39CCCDA6C6FEAB4EEA96CDE5 /* Pods-FlyCat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8P23C332Y5;
@@ -585,6 +664,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.freesky.fly.FlyCat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 14.0;
@@ -593,9 +673,11 @@
 		};
 		68CE6F1329F3D42D00DBE8F6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CEC3281DF66A9CEF66BAB81C /* Pods-FlyCat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8P23C332Y5;

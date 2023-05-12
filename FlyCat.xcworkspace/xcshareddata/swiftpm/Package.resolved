@@ -1,0 +1,104 @@
+{
+  "pins" : [
+    {
+      "identity" : "alamofire",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Alamofire/Alamofire",
+      "state" : {
+        "branch" : "5.6.2",
+        "revision" : "8dd85aee02e39dd280c75eef88ffdb86eed4b07b"
+      }
+    },
+    {
+      "identity" : "cocoaasyncsocket",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/robbiehanson/CocoaAsyncSocket.git",
+      "state" : {
+        "revision" : "dbdc00669c1ced63b27c3c5f052ee4d28f10150c",
+        "version" : "7.6.5"
+      }
+    },
+    {
+      "identity" : "fuzi",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/cezheng/Fuzi",
+      "state" : {
+        "revision" : "f08c8323da21e985f3772610753bcfc652c2103f",
+        "version" : "3.1.3"
+      }
+    },
+    {
+      "identity" : "gzipswift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/1024jp/GzipSwift",
+      "state" : {
+        "revision" : "7a7f17761c76a932662ab77028a4329f67d645a4",
+        "version" : "5.2.0"
+      }
+    },
+    {
+      "identity" : "handyjson",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/alibaba/HandyJSON.git",
+      "state" : {
+        "revision" : "dcf39cf062680ffa4fd0acb7f9117a97755c113f",
+        "version" : "5.0.2"
+      }
+    },
+    {
+      "identity" : "kingfisher",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/onevcat/Kingfisher.git",
+      "state" : {
+        "revision" : "af4be924ad984cf4d16f4ae4df424e79a443d435",
+        "version" : "7.6.2"
+      }
+    },
+    {
+      "identity" : "marqueelabel",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/cbpowell/MarqueeLabel",
+      "state" : {
+        "revision" : "f2c72a5f8568579dade6350dc26a482076d3d346",
+        "version" : "4.3.0"
+      }
+    },
+    {
+      "identity" : "pocketsvg",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/pocketsvg/PocketSVG.git",
+      "state" : {
+        "revision" : "d30bf6678ae93763782a4e19973dc64762d42c4a",
+        "version" : "2.7.2"
+      }
+    },
+    {
+      "identity" : "snapkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SnapKit/SnapKit",
+      "state" : {
+        "revision" : "f222cbdf325885926566172f6f5f06af95473158",
+        "version" : "5.6.0"
+      }
+    },
+    {
+      "identity" : "starscream",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/daltoniam/Starscream.git",
+      "state" : {
+        "revision" : "df8d82047f6654d8e4b655d1b1525c64e1059d21",
+        "version" : "4.0.4"
+      }
+    },
+    {
+      "identity" : "swifter",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/yichengchen/swifter.git",
+      "state" : {
+        "branch" : "stable",
+        "revision" : "4850fa96759cbfb81f4178bf7ba9d58afe55d7fd"
+      }
+    }
+  ],
+  "version" : 2
+}

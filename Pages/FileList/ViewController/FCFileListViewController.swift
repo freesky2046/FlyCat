@@ -8,6 +8,8 @@
 import UIKit
 import Alamofire
 import HandyJSON
+import MBProgressHUD
+
 
 class FCFileListViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
  
@@ -30,6 +32,9 @@ class FCFileListViewController: UIViewController,UICollectionViewDelegate,UIColl
         collectionView.register(UINib(nibName: "FCVideoCollectionViewHeader", bundle: nil), forSupplementaryViewOfKind:  UICollectionView.elementKindSectionHeader, withReuseIdentifier: "FCVideoCollectionViewHeader")
         collectionView.delegate = self;
         collectionView.dataSource = self;
+        
+//        MBProgressHUD.showAdded(to: self.view, animated: true)
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
