@@ -29,7 +29,7 @@ class FCPlayerViewController: UIViewController {
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        player.stop()
+
         
     }
     
@@ -77,7 +77,8 @@ class FCPlayerViewController: UIViewController {
                         guard let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
                             return
                         }
-                        let fileUrl = documentsDirectory.appendingPathComponent("name.mp4")
+                        let name = NSUUID().uuidString + ".m3u8"
+                        let fileUrl = documentsDirectory.appendingPathComponent(name)
                         if FileManager.default.fileExists(atPath: fileUrl.absoluteString) {
                             do {
                                 try FileManager.default.removeItem(at: fileUrl)
