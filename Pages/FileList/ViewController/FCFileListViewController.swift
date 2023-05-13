@@ -18,7 +18,7 @@ class FCFileListViewController: UIViewController,UICollectionViewDelegate,UIColl
     public var parent_name:String = "文件列表"
     private var dataArray:[FCVideoListInfo]?
     @IBOutlet weak private var collectionView: UICollectionView!
-    
+    @IBOutlet weak var emptyStackview: UIStackView!
     // MARK: - builder
 
     static func build() -> FCFileListViewController? {
@@ -33,8 +33,10 @@ class FCFileListViewController: UIViewController,UICollectionViewDelegate,UIColl
         collectionView.register(UINib(nibName: "FCVideoCollectionViewHeader", bundle: nil), forSupplementaryViewOfKind:  UICollectionView.elementKindSectionHeader, withReuseIdentifier: "FCVideoCollectionViewHeader")
         collectionView.delegate = self;
         collectionView.dataSource = self;
-        
-//        MBProgressHUD.showAdded(to: self.view, animated: true)
+        setupUI()
+    }
+    
+    func setupUI() {
         
     }
     
@@ -45,7 +47,7 @@ class FCFileListViewController: UIViewController,UICollectionViewDelegate,UIColl
             let login:FCLoginViewController? = FCLoginViewController.build();
             self.present(login!, animated: true)
         }else {
-            refreshFileList();
+            refreshFileList()
         }
     }
     
@@ -64,6 +66,18 @@ class FCFileListViewController: UIViewController,UICollectionViewDelegate,UIColl
                         self?.showError()
                     }else {
                         self?.dataArray = self?.filter(list: videoRes?.list)
+                        if let  dataArray = self?.dataArray {
+                            if dataArray.isEmpty {
+                                self?.emptyStackview.isHidden = false
+                                self?.collectionView.isHidden = true
+                            } else {
+                                self?.emptyStackview.isHidden = true
+                                self?.collectionView.isHidden = false
+                            }
+                        } else {
+                            self?.emptyStackview.isHidden = true
+                            self?.collectionView.isHidden = false
+                        }
                         self?.reloadData()
                     }
                 }else {
@@ -158,7 +172,6 @@ class FCFileListViewController: UIViewController,UICollectionViewDelegate,UIColl
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "FCVideoCollectionViewHeader", for: indexPath) as! FCVideoCollectionViewHeader
         // 更新标题
-
         headerView.leftLabel.text = parent_name
         return headerView
     }
