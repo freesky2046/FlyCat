@@ -41,7 +41,7 @@ class FCVideoItemCell: UICollectionViewCell {
         func _showFolder(){
             folderContainer.isHidden = false
             videoContainer.isHidden = true
-            folderImageView.image = UIImage(named: "")
+//            folderImageView.image = UIImage(named: "")
         }
         
         func _showVideo() {
