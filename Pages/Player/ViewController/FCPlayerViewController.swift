@@ -7,15 +7,14 @@
 
 import UIKit
 import Alamofire
-import AVKit
+import TVVLCKit
 
 
 class FCPlayerViewController: UIViewController {
     public var path:String? = "/"
     public var adToken:String? = ""
     private var stage:Int = 1
-    private var player:AVPlayer?
-    var playerItem: AVPlayerItem?
+    var player:VLCMediaPlayer!
 
     
     static func build() -> FCPlayerViewController {
@@ -25,6 +24,12 @@ class FCPlayerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        player.stop()
         
     }
     
@@ -73,21 +78,21 @@ class FCPlayerViewController: UIViewController {
                             return
                         }
                         let fileUrl = documentsDirectory.appendingPathComponent("name.mp4")
+                        if FileManager.default.fileExists(atPath: fileUrl.absoluteString) {
+                            do {
+                                try FileManager.default.removeItem(at: fileUrl)
+                            } catch {
+                                return
+                            }
+                        }
                         do {
                             try data.write(to: fileUrl, atomically: true, encoding: .utf8)
                         } catch {
                             return
                         }
-                        self?.playerItem = AVPlayerItem(url: fileUrl)
-                        self?.player = AVPlayer(playerItem: self?.playerItem)
-                        if(self != nil){
-                            self!.player?.addObserver(self!, forKeyPath: "status", options: [.old, .new], context: nil)
-                        }
-                        let playerLayer = AVPlayerLayer(player: self?.player)
-                        playerLayer.backgroundColor = UIColor.red.cgColor
-                        playerLayer.frame = self?.view?.bounds ?? CGRect()
-                        self?.view.layer.addSublayer(playerLayer)
-                        self?.player?.play()
+                        self?.play(path: fileUrl)
+
+                        
                     }
                     
                 case .failure(let error):
@@ -106,26 +111,18 @@ class FCPlayerViewController: UIViewController {
         }
     }
     
+    func play(path:URL) {
+        player = VLCMediaPlayer()
+//        let m3u8URL = URL(string: "data:text/plain,\(m3u8Content.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)")
+        let media = VLCMedia(url:path)
+        player = VLCMediaPlayer()
+        player.media = media;
+        player.play()
+        player.drawable = self.view
+    }
+    
     func waiting() {
         print("轮询转码")
     }
     
-    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-        if keyPath == "status", let player = object as? AVPlayer {
-            switch player.status {
-            case .unknown:
-                // 播放状态未知
-                print("unknown")
-            case .readyToPlay:
-                // 播放器已准备好播放视频
-                print("readyToPlay")
-            case .failed:
-                // 播放失败
-                print("error")
-            @unknown default:
-                break
-            }
-        }
-    }
-
 }

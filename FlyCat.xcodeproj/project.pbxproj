@@ -11,7 +11,6 @@
 		68488A3C2A0783C8003C64DF /* FCPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68488A3A2A0783C8003C64DF /* FCPlayerViewController.swift */; };
 		68488A3D2A0783C8003C64DF /* FCPlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68488A3B2A0783C8003C64DF /* FCPlayerViewController.xib */; };
 		6850333E29FAA4E1000CEEB5 /* HandyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 6850333D29FAA4E1000CEEB5 /* HandyJSON */; };
-		68592A982A0F317A00F810D2 /* TVVLCKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68592A972A0F317A00F810D2 /* TVVLCKit.xcframework */; };
 		6863ADC02A02AC1800446A13 /* FCFileListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6863ADBF2A02AC1800446A13 /* FCFileListViewController.xib */; };
 		6863ADC32A02B98000446A13 /* FCVideoListInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6863ADC22A02B98000446A13 /* FCVideoListInfo.swift */; };
 		6863ADD52A03DCA300446A13 /* FCQRBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6863ADCE2A03DCA300446A13 /* FCQRBuilder.swift */; };
@@ -27,6 +26,8 @@
 		6863ADEF2A07317C00446A13 /* FCVideoCollectionViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6863ADED2A07317C00446A13 /* FCVideoCollectionViewHeader.xib */; };
 		6897335A29F5577200BC7630 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 6897335929F5577200BC7630 /* Kingfisher */; };
 		68ADC0B12A0F5DDA00B47438 /* video.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 68ADC0B02A0F5DDA00B47438 /* video.m4v */; };
+		68ADC0B42A0FAEBD00B47438 /* TVVLCKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68592A972A0F317A00F810D2 /* TVVLCKit.xcframework */; };
+		68ADC0B52A0FAEBD00B47438 /* TVVLCKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 68592A972A0F317A00F810D2 /* TVVLCKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		68CE6F1C29F3D47700DBE8F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68CE6F1629F3D47700DBE8F6 /* Assets.xcassets */; };
 		68CE6F1D29F3D47700DBE8F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68CE6F1729F3D47700DBE8F6 /* LaunchScreen.storyboard */; };
 		68CE6F1F29F3D47700DBE8F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CE6F1B29F3D47700DBE8F6 /* AppDelegate.swift */; };
@@ -35,6 +36,20 @@
 		68CE6F4529F3E91100DBE8F6 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 68CE6F4429F3E91100DBE8F6 /* Alamofire */; };
 		68E7C5A52A02A182004D94CF /* FCFileListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E7C5A32A02A182004D94CF /* FCFileListViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		68ADC0B62A0FAEBD00B47438 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				68ADC0B52A0FAEBD00B47438 /* TVVLCKit.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		5785CC4F16D46DC7DB6408C4 /* Pods_FlyCat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlyCat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,7 +88,7 @@
 			files = (
 				6897335A29F5577200BC7630 /* Kingfisher in Frameworks */,
 				68CE6F4529F3E91100DBE8F6 /* Alamofire in Frameworks */,
-				68592A982A0F317A00F810D2 /* TVVLCKit.xcframework in Frameworks */,
+				68ADC0B42A0FAEBD00B47438 /* TVVLCKit.xcframework in Frameworks */,
 				6850333E29FAA4E1000CEEB5 /* HandyJSON in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,6 +355,7 @@
 				68CE6EFC29F3D42C00DBE8F6 /* Sources */,
 				68CE6EFD29F3D42C00DBE8F6 /* Frameworks */,
 				68CE6EFE29F3D42C00DBE8F6 /* Resources */,
+				68ADC0B62A0FAEBD00B47438 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

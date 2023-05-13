@@ -19,7 +19,7 @@ class FCFileListViewController: UIViewController,UICollectionViewDelegate,UIColl
     private var dataArray:[FCVideoListInfo]?
     @IBOutlet weak private var collectionView: UICollectionView!
     @IBOutlet weak var emptyStackview: UIStackView!
-    var player:VLCMediaPlayer!
+ 
     
     
     // MARK: - builder
@@ -35,21 +35,10 @@ class FCFileListViewController: UIViewController,UICollectionViewDelegate,UIColl
         collectionView.register(UINib(nibName: "FCVideoCollectionViewHeader", bundle: nil), forSupplementaryViewOfKind:  UICollectionView.elementKindSectionHeader, withReuseIdentifier: "FCVideoCollectionViewHeader")
         collectionView.delegate = self;
         collectionView.dataSource = self;
-        setupUI()
+//        setupUI()
     }
     
-    func setupUI() {
-        player = VLCMediaPlayer()
-        let path = Bundle.main.path(forResource: "video", ofType: "m4v")
-        let media = VLCMedia(path: path!)
-        player = VLCMediaPlayer()
-        player.media = media;
-        player.play()
-        if let view = player.drawable as? UIView {
-            
-            self.view.addSubview(view)
-        }
-    }
+
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
