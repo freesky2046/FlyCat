@@ -11,6 +11,7 @@
 		68488A3C2A0783C8003C64DF /* FCPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68488A3A2A0783C8003C64DF /* FCPlayerViewController.swift */; };
 		68488A3D2A0783C8003C64DF /* FCPlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68488A3B2A0783C8003C64DF /* FCPlayerViewController.xib */; };
 		6850333E29FAA4E1000CEEB5 /* HandyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 6850333D29FAA4E1000CEEB5 /* HandyJSON */; };
+		68592A982A0F317A00F810D2 /* TVVLCKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68592A972A0F317A00F810D2 /* TVVLCKit.xcframework */; };
 		6863ADC02A02AC1800446A13 /* FCFileListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6863ADBF2A02AC1800446A13 /* FCFileListViewController.xib */; };
 		6863ADC32A02B98000446A13 /* FCVideoListInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6863ADC22A02B98000446A13 /* FCVideoListInfo.swift */; };
 		6863ADD52A03DCA300446A13 /* FCQRBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6863ADCE2A03DCA300446A13 /* FCQRBuilder.swift */; };
@@ -39,6 +40,8 @@
 		68357B542A094C30008AE463 /* FCPlayerInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCPlayerInfo.swift; sourceTree = "<group>"; };
 		68488A3A2A0783C8003C64DF /* FCPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCPlayerViewController.swift; sourceTree = "<group>"; };
 		68488A3B2A0783C8003C64DF /* FCPlayerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FCPlayerViewController.xib; sourceTree = "<group>"; };
+		68592A972A0F317A00F810D2 /* TVVLCKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = TVVLCKit.xcframework; path = "../../../Downloads/TVVLCKit-binary 3/TVVLCKit.xcframework"; sourceTree = "<group>"; };
+		68592A9B2A0F323300F810D2 /* FlyCat-Bridging-header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FlyCat-Bridging-header.h"; sourceTree = "<group>"; };
 		6863ADBF2A02AC1800446A13 /* FCFileListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FCFileListViewController.xib; sourceTree = "<group>"; };
 		6863ADC22A02B98000446A13 /* FCVideoListInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCVideoListInfo.swift; sourceTree = "<group>"; };
 		6863ADCE2A03DCA300446A13 /* FCQRBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FCQRBuilder.swift; sourceTree = "<group>"; };
@@ -68,6 +71,7 @@
 			files = (
 				6897335A29F5577200BC7630 /* Kingfisher in Frameworks */,
 				68CE6F4529F3E91100DBE8F6 /* Alamofire in Frameworks */,
+				68592A982A0F317A00F810D2 /* TVVLCKit.xcframework in Frameworks */,
 				6850333E29FAA4E1000CEEB5 /* HandyJSON in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,6 +143,7 @@
 			children = (
 				6863ADCE2A03DCA300446A13 /* FCQRBuilder.swift */,
 				6863ADD82A03DFF100446A13 /* DataConverter.swift */,
+				68592A9B2A0F323300F810D2 /* FlyCat-Bridging-header.h */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -290,6 +295,7 @@
 		68E6FD402A0D25840094F9DB /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				68592A972A0F317A00F810D2 /* TVVLCKit.xcframework */,
 			);
 			path = Vendor;
 			sourceTree = "<group>";
