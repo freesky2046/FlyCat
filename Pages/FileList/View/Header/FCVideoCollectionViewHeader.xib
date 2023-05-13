@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder.AppleTV.XIB" version="3.0" toolsVersion="21507" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="appleTV" appearance="light"/>
     <dependencies>
+        <deployment identifier="tvOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -14,7 +15,7 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uU4-qv-ffJ">
-                    <rect key="frame" x="0.0" y="0.0" width="1920" height="50"/>
+                    <rect key="frame" x="90" y="0.0" width="1830" height="50"/>
                     <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -22,7 +23,7 @@
             </subviews>
             <viewLayoutGuide key="safeArea" id="OcR-fs-QSY"/>
             <constraints>
-                <constraint firstItem="uU4-qv-ffJ" firstAttribute="leading" secondItem="7wu-8X-Iab" secondAttribute="leading" id="H5H-Kt-El2"/>
+                <constraint firstItem="uU4-qv-ffJ" firstAttribute="leading" secondItem="7wu-8X-Iab" secondAttribute="leading" constant="90" id="H5H-Kt-El2"/>
                 <constraint firstAttribute="bottom" secondItem="uU4-qv-ffJ" secondAttribute="bottom" id="KQY-Oi-fBd"/>
                 <constraint firstAttribute="trailing" secondItem="uU4-qv-ffJ" secondAttribute="trailing" id="LLe-g3-1vb"/>
                 <constraint firstItem="uU4-qv-ffJ" firstAttribute="top" secondItem="7wu-8X-Iab" secondAttribute="top" id="osW-T4-aL8"/>

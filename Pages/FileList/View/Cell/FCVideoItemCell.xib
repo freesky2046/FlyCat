@@ -19,7 +19,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XIS-tA-rLb" userLabel="FolderContainer">
                         <rect key="frame" x="0.0" y="0.0" width="160" height="107"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ov3-Cr-nDM">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="folder" translatesAutoresizingMaskIntoConstraints="NO" id="Ov3-Cr-nDM">
                                 <rect key="frame" x="0.0" y="0.0" width="160" height="107"/>
                             </imageView>
                         </subviews>
@@ -70,4 +70,7 @@
             <point key="canvasLocation" x="-182" y="-83.5"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="folder" width="103" height="89"/>
+    </resources>
 </document>

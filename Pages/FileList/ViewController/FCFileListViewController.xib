@@ -19,14 +19,37 @@
             <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KyR-mD-hxq">
+                    <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="JLp-Qf-CKA">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o0p-fg-Jug">
+                                <rect key="frame" x="0.0" y="0.0" width="1680" height="952"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="f9h-sB-G7K">
+                                    <rect key="frame" x="0.0" y="0.0" width="1680" height="952"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <vibrancyEffect>
+                                    <blurEffect style="regular"/>
+                                </vibrancyEffect>
+                            </visualEffectView>
+                        </subviews>
+                    </view>
+                    <vibrancyEffect>
+                        <blurEffect style="light"/>
+                    </vibrancyEffect>
+                </visualEffectView>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="kc8-ke-huP">
-                    <rect key="frame" x="90" y="60" width="1740" height="960"/>
+                    <rect key="frame" x="0.0" y="60" width="1920" height="960"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="V0I-2z-wKJ">
                         <size key="itemSize" width="128" height="128"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <inset key="sectionInset" minX="90" minY="0.0" maxX="90" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
                 <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="add-qc-o7s">
@@ -45,12 +68,16 @@
                 </stackView>
             </subviews>
             <constraints>
+                <constraint firstItem="KyR-mD-hxq" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="0ix-Q2-BVc"/>
+                <constraint firstItem="KyR-mD-hxq" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Mj6-No-6zb"/>
                 <constraint firstAttribute="bottom" secondItem="kc8-ke-huP" secondAttribute="bottom" constant="60" id="SlA-2D-Syg"/>
-                <constraint firstItem="kc8-ke-huP" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="90" id="TjY-SN-5K1"/>
                 <constraint firstItem="kc8-ke-huP" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="60" id="VIc-UJ-1b7"/>
-                <constraint firstAttribute="trailing" secondItem="kc8-ke-huP" secondAttribute="trailing" constant="90" id="YRR-Gw-qV4"/>
+                <constraint firstAttribute="trailing" secondItem="KyR-mD-hxq" secondAttribute="trailing" id="YHD-nD-Wse"/>
                 <constraint firstItem="add-qc-o7s" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="bTq-Ux-NAC"/>
                 <constraint firstItem="add-qc-o7s" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="bwY-tO-xFA"/>
+                <constraint firstAttribute="bottom" secondItem="KyR-mD-hxq" secondAttribute="bottom" id="wDq-Pl-O6q"/>
+                <constraint firstItem="kc8-ke-huP" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="wUg-hP-JdX"/>
+                <constraint firstAttribute="trailing" secondItem="kc8-ke-huP" secondAttribute="trailing" id="z18-ON-odW"/>
             </constraints>
             <point key="canvasLocation" x="148" y="-25"/>
         </view>
