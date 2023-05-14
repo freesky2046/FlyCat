@@ -35,7 +35,7 @@ class FCFileListViewController: UIViewController,UICollectionViewDelegate,UIColl
         collectionView.register(UINib(nibName: "FCVideoCollectionViewHeader", bundle: nil), forSupplementaryViewOfKind:  UICollectionView.elementKindSectionHeader, withReuseIdentifier: "FCVideoCollectionViewHeader")
         collectionView.delegate = self;
         collectionView.dataSource = self;
-//        setupUI()
+
     }
     
 
@@ -57,9 +57,11 @@ class FCFileListViewController: UIViewController,UICollectionViewDelegate,UIColl
         p["method"] = "list";
         p["dir"] = parent_path;
         p["web"] = 1;
+        UIViewController.showHUD()
         FCNetworkUtil.request("https://pan.baidu.com/rest/2.0/xpan/file", parameters: p) {[weak self] res in
             switch res {
             case .success(let data):
+                UIViewController.hideHUD()
                 let videoRes =  FCVideoListInfoRes.deserialize(from: data);
                 if let  errorno = videoRes?.errno  {
                     if errorno != 0 {
@@ -84,6 +86,7 @@ class FCFileListViewController: UIViewController,UICollectionViewDelegate,UIColl
                     self?.showError()
                 }
             case .failure(let error):
+                UIViewController.hideHUD()
                 print(error)
             }
         }
@@ -142,7 +145,7 @@ class FCFileListViewController: UIViewController,UICollectionViewDelegate,UIColl
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSizeMake(308, 175)
+        return CGSizeMake(397, 175 + 80)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {

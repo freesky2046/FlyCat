@@ -29,7 +29,9 @@ class FCPlayerViewController: UIViewController {
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-
+        if(player != nil) {
+            self.player.stop()
+        }
         
     }
     
@@ -113,13 +115,15 @@ class FCPlayerViewController: UIViewController {
     }
     
     func play(path:URL) {
-        player = VLCMediaPlayer()
-//        let m3u8URL = URL(string: "data:text/plain,\(m3u8Content.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)")
+//        let options = ["--network-caching=1000", "--sout-mux-caching=2000", "--sout-transcode-fps=25", "--no-skip-frames"]
+
         let media = VLCMedia(url:path)
         player = VLCMediaPlayer()
         player.media = media;
         player.play()
-        player.drawable = self.view
+        let playerview = UIView.init(frame: CGRect(x: 0, y: 0, width: FCConstant.screenWidth, height: FCConstant.screenHeight))
+        self.view.addSubview(playerview)
+        player.drawable = playerview
     }
     
     func waiting() {

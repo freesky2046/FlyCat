@@ -10,41 +10,59 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="FCVideoItemCell" id="Rz2-K0-ksD" customClass="FCVideoItemCell" customModule="FlyCat" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="160" height="107"/>
+            <rect key="frame" x="0.0" y="0.0" width="593" height="401"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="160" height="107"/>
+                <rect key="frame" x="0.0" y="0.0" width="593" height="401"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XIS-tA-rLb" userLabel="FolderContainer">
-                        <rect key="frame" x="0.0" y="0.0" width="160" height="107"/>
+                        <rect key="frame" x="0.0" y="0.0" width="593" height="321"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="folder" translatesAutoresizingMaskIntoConstraints="NO" id="Ov3-Cr-nDM">
-                                <rect key="frame" x="0.0" y="0.0" width="160" height="107"/>
+                                <rect key="frame" x="0.0" y="116" width="593" height="89"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Ov3-Cr-nDM" firstAttribute="top" secondItem="XIS-tA-rLb" secondAttribute="top" id="45E-93-Key"/>
                             <constraint firstAttribute="trailing" secondItem="Ov3-Cr-nDM" secondAttribute="trailing" id="AFf-Qt-d8d"/>
-                            <constraint firstAttribute="bottom" secondItem="Ov3-Cr-nDM" secondAttribute="bottom" id="g9a-QP-BXm"/>
+                            <constraint firstItem="Ov3-Cr-nDM" firstAttribute="centerY" secondItem="XIS-tA-rLb" secondAttribute="centerY" id="k6A-8i-vRg"/>
                             <constraint firstItem="Ov3-Cr-nDM" firstAttribute="leading" secondItem="XIS-tA-rLb" secondAttribute="leading" id="s8K-kH-LIV"/>
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4cG-o7-8EX" userLabel="VideoContainer">
-                        <rect key="frame" x="0.0" y="0.0" width="160" height="107"/>
+                        <rect key="frame" x="0.0" y="0.0" width="593" height="321"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TpI-Om-v3V">
-                                <rect key="frame" x="0.0" y="0.0" width="160" height="107"/>
+                                <rect key="frame" x="0.0" y="0.0" width="593" height="321"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="TpI-Om-v3V" firstAttribute="top" secondItem="4cG-o7-8EX" secondAttribute="top" id="3ZY-xN-IOb"/>
-                            <constraint firstAttribute="bottom" secondItem="TpI-Om-v3V" secondAttribute="bottom" id="DfH-ud-pGD"/>
                             <constraint firstItem="TpI-Om-v3V" firstAttribute="leading" secondItem="4cG-o7-8EX" secondAttribute="leading" id="J4E-NW-yfF"/>
+                            <constraint firstAttribute="bottom" secondItem="TpI-Om-v3V" secondAttribute="bottom" id="dD3-lR-Q9k"/>
                             <constraint firstAttribute="trailing" secondItem="TpI-Om-v3V" secondAttribute="trailing" id="fu1-4e-bYl"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IFC-iH-m6c">
+                        <rect key="frame" x="0.0" y="321" width="593" height="80"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fFI-ba-E13">
+                                <rect key="frame" x="0.0" y="0.0" width="593" height="80"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="fFI-ba-E13" secondAttribute="bottom" id="0KY-3K-DYc"/>
+                            <constraint firstAttribute="height" constant="80" id="1Y3-XX-NcX"/>
+                            <constraint firstItem="fFI-ba-E13" firstAttribute="top" secondItem="IFC-iH-m6c" secondAttribute="top" id="QfO-GJ-mXl"/>
+                            <constraint firstItem="fFI-ba-E13" firstAttribute="leading" secondItem="IFC-iH-m6c" secondAttribute="leading" id="efx-Y7-PWs"/>
+                            <constraint firstAttribute="trailing" secondItem="fFI-ba-E13" secondAttribute="trailing" id="tFP-ac-XSc"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -52,22 +70,26 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="4cG-o7-8EX" firstAttribute="top" secondItem="Rz2-K0-ksD" secondAttribute="top" id="06l-SU-oIa"/>
-                <constraint firstAttribute="bottom" secondItem="4cG-o7-8EX" secondAttribute="bottom" id="0cv-4B-Y16"/>
+                <constraint firstAttribute="bottom" secondItem="IFC-iH-m6c" secondAttribute="bottom" id="1K7-VU-NrD"/>
+                <constraint firstItem="IFC-iH-m6c" firstAttribute="top" secondItem="XIS-tA-rLb" secondAttribute="bottom" id="7fC-jw-QHV"/>
                 <constraint firstItem="4cG-o7-8EX" firstAttribute="leading" secondItem="Rz2-K0-ksD" secondAttribute="leading" id="9KI-Oy-eHT"/>
-                <constraint firstAttribute="bottom" secondItem="XIS-tA-rLb" secondAttribute="bottom" id="Lbk-kY-LMk"/>
                 <constraint firstAttribute="trailing" secondItem="XIS-tA-rLb" secondAttribute="trailing" id="Wii-qH-WHU"/>
+                <constraint firstItem="IFC-iH-m6c" firstAttribute="leading" secondItem="Rz2-K0-ksD" secondAttribute="leading" id="dm0-Zr-Ebl"/>
                 <constraint firstItem="XIS-tA-rLb" firstAttribute="top" secondItem="Rz2-K0-ksD" secondAttribute="top" id="gK8-ed-j4e"/>
+                <constraint firstAttribute="trailing" secondItem="IFC-iH-m6c" secondAttribute="trailing" id="gqX-bj-3rb"/>
                 <constraint firstItem="XIS-tA-rLb" firstAttribute="leading" secondItem="Rz2-K0-ksD" secondAttribute="leading" id="hyZ-tf-RKp"/>
                 <constraint firstAttribute="trailing" secondItem="4cG-o7-8EX" secondAttribute="trailing" id="srz-LM-3zi"/>
+                <constraint firstItem="IFC-iH-m6c" firstAttribute="top" secondItem="4cG-o7-8EX" secondAttribute="bottom" id="ys3-G6-yIe"/>
             </constraints>
-            <size key="customSize" width="160" height="107"/>
+            <size key="customSize" width="593" height="401"/>
             <connections>
                 <outlet property="folderContainer" destination="XIS-tA-rLb" id="Dq8-WW-rWU"/>
                 <outlet property="folderImageView" destination="Ov3-Cr-nDM" id="ge4-RB-UXe"/>
+                <outlet property="titlesLabel" destination="fFI-ba-E13" id="hEf-Bm-oKJ"/>
                 <outlet property="videoContainer" destination="4cG-o7-8EX" id="BdV-vW-QlJ"/>
                 <outlet property="videoImageView" destination="TpI-Om-v3V" id="1ox-cw-JlI"/>
             </connections>
-            <point key="canvasLocation" x="-182" y="-83.5"/>
+            <point key="canvasLocation" x="-360.5" y="-230.5"/>
         </collectionViewCell>
     </objects>
     <resources>

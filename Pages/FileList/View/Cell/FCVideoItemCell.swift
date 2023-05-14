@@ -21,16 +21,22 @@ class FCVideoItemCell: UICollectionViewCell {
     @IBOutlet weak var folderImageView: UIImageView!
     @IBOutlet weak var videoContainer: UIView!
     @IBOutlet weak var videoImageView: UIImageView!
-    
+    @IBOutlet weak var titlesLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         self.layer.masksToBounds = true
         self.layer.cornerRadius = 15
+        self.folderContainer.backgroundColor = UIColor.white
+        self.folderContainer.layer.masksToBounds = true
+        self.folderContainer.layer.cornerRadius = 15
+        self.titlesLabel.text = ""
+        self.titlesLabel.backgroundColor
     }
     
     public func refresh(data:FCVideoListInfo) {
         if let isdir = data.isdir {
+            self.titlesLabel.text = data.server_filename ?? ""
             if isdir == 1 {
                 type = .folder
                 _showFolder()
