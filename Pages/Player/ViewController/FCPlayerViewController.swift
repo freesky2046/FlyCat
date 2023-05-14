@@ -10,7 +10,7 @@ import Alamofire
 import TVVLCKit
 
 
-class FCPlayerViewController: UIViewController {
+class FCPlayerViewController: UIViewController, VLCMediaPlayerDelegate {
     public var path:String? = "/"
     public var adToken:String? = ""
     private var stage:Int = 1
@@ -55,7 +55,9 @@ class FCPlayerViewController: UIViewController {
             // 添加请求头信息
             headers.add(name: "Host", value: "pan.baidu.com")
             headers.add(name: "User-Agent", value: FCConstant.userAgent())
+            UIViewController.showHUD()
             FCNetworkUtil.request(url, parameters: p, headers:headers) {[weak self] res in
+                UIViewController.hideHUD()
                 switch res {
                 case .success(let data):
                     let playerInfo =  FCPlayerInfo.deserialize(from: data);
@@ -76,24 +78,26 @@ class FCPlayerViewController: UIViewController {
                         }
                     }
                     else if self?.stage == 2 && data.count > 0 {
-                        guard let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
-                            return
-                        }
-                        let name = NSUUID().uuidString + ".m3u8"
-                        let fileUrl = documentsDirectory.appendingPathComponent(name)
-                        if FileManager.default.fileExists(atPath: fileUrl.absoluteString) {
-                            do {
-                                try FileManager.default.removeItem(at: fileUrl)
-                            } catch {
-                                return
-                            }
-                        }
-                        do {
-                            try data.write(to: fileUrl, atomically: true, encoding: .utf8)
-                        } catch {
-                            return
-                        }
-                        self?.play(path: fileUrl)
+                        print("执行播放")
+//                        guard let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
+//                            return
+//                        }
+//                        let name = path + ".m3u8"
+//                        let fileUrl = documentsDirectory.appendingPathComponent(name)
+//                        if FileManager.default.fileExists(atPath: fileUrl.absoluteString) {
+//                            do {
+//                                try FileManager.default.removeItem(at: fileUrl)
+//                            } catch {
+//                                return
+//                            }
+//                        }
+//                        do {
+//                            try data.write(to: fileUrl, atomically: true, encoding: .utf8)
+//                        } catch {
+//                            return
+//                        }
+                        let fileUrl = URL(string: "http://live.shaoxing.com.cn/video/s10001-sxtv2/index.m3u8?channel=")
+                        self?.play(path: fileUrl!)
 
                         
                     }
@@ -115,12 +119,13 @@ class FCPlayerViewController: UIViewController {
     }
     
     func play(path:URL) {
-//        let options = ["--network-caching=1000", "--sout-mux-caching=2000", "--sout-transcode-fps=25", "--no-skip-frames"]
+//        let options = ["--cr-average=10000"]
 
         let media = VLCMedia(url:path)
         player = VLCMediaPlayer()
         player.media = media;
         player.play()
+        player.delegate = self
         let playerview = UIView.init(frame: CGRect(x: 0, y: 0, width: FCConstant.screenWidth, height: FCConstant.screenHeight))
         self.view.addSubview(playerview)
         player.drawable = playerview
@@ -130,4 +135,11 @@ class FCPlayerViewController: UIViewController {
         print("轮询转码")
     }
     
+    func mediaPlayerStateChanged(_ aNotification: Notification) {
+        let player = aNotification.object as? VLCMediaPlayer
+        
+        print(aNotification)
+    }
+//    @objc
+//    - (void)mediaPlayerStateChanged:(NSNotification *)aNotification;
 }

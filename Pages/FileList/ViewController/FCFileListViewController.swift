@@ -33,9 +33,13 @@ class FCFileListViewController: UIViewController,UICollectionViewDelegate,UIColl
         super.viewDidLoad()
         collectionView.register(UINib(nibName:"FCVideoItemCell", bundle: nil), forCellWithReuseIdentifier:"FCVideoItemCell");
         collectionView.register(UINib(nibName: "FCVideoCollectionViewHeader", bundle: nil), forSupplementaryViewOfKind:  UICollectionView.elementKindSectionHeader, withReuseIdentifier: "FCVideoCollectionViewHeader")
-        collectionView.delegate = self;
-        collectionView.dataSource = self;
-
+        collectionView.delegate = self
+        collectionView.dataSource = self
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        UIViewController.hideHUD()
     }
     
 
@@ -157,6 +161,7 @@ class FCFileListViewController: UIViewController,UICollectionViewDelegate,UIColl
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    
         let info:FCVideoListInfo = self.dataArray![indexPath.row]
         if info.isdir != nil && info.isdir == 1 {
             let nextList = FCFileListViewController.build()

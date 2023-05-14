@@ -31,7 +31,6 @@ class FCVideoItemCell: UICollectionViewCell {
         self.folderContainer.layer.masksToBounds = true
         self.folderContainer.layer.cornerRadius = 15
         self.titlesLabel.text = ""
-        self.titlesLabel.backgroundColor
     }
     
     public func refresh(data:FCVideoListInfo) {
