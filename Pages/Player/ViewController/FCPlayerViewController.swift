@@ -79,26 +79,20 @@ class FCPlayerViewController: UIViewController, VLCMediaPlayerDelegate {
                     }
                     else if self?.stage == 2 && data.count > 0 {
                         print("执行播放")
-//                        guard let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
-//                            return
-//                        }
-//                        let name = path + ".m3u8"
-//                        let fileUrl = documentsDirectory.appendingPathComponent(name)
-//                        if FileManager.default.fileExists(atPath: fileUrl.absoluteString) {
-//                            do {
-//                                try FileManager.default.removeItem(at: fileUrl)
-//                            } catch {
-//                                return
-//                            }
-//                        }
-//                        do {
-//                            try data.write(to: fileUrl, atomically: true, encoding: .utf8)
-//                        } catch {
-//                            return
-//                        }
-                        let fileUrl = URL(string: "http://live.shaoxing.com.cn/video/s10001-sxtv2/index.m3u8?channel=")
-                        self?.play(path: fileUrl!)
-
+                        var fileURL = URL(string: "")
+                        if let cacheDirectory = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first {
+                             fileURL = cacheDirectory.appendingPathComponent("filename.txt")
+                            do {
+//                                try data.write(to: fileURL)
+                                try data.write(to: fileURL!, atomically: true, encoding: .utf8)
+                            } catch {
+                                return
+                            }
+                        }
+//                        let fileUrl = URL(string: "http://live.shaoxing.com.cn/video/s10001-sxtv2/index.m3u8?channel=")
+//                        self?.play(path: fileUrl)
+//                        self.p
+                        self?.play(path:fileURL!)
                         
                     }
                     
@@ -119,13 +113,17 @@ class FCPlayerViewController: UIViewController, VLCMediaPlayerDelegate {
     }
     
     func play(path:URL) {
-//        let options = ["--cr-average=10000"]
+//        let options = ["--avcodec-hw=any"]
 
         let media = VLCMedia(url:path)
         player = VLCMediaPlayer()
+        
         player.media = media;
         player.play()
         player.delegate = self
+//        player.scaleFactor = 0.5
+//        player.videoAspectRatio = "16:9"
+        
         let playerview = UIView.init(frame: CGRect(x: 0, y: 0, width: FCConstant.screenWidth, height: FCConstant.screenHeight))
         self.view.addSubview(playerview)
         player.drawable = playerview
