@@ -11,27 +11,39 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" misplaced="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FCSettingCell" id="fBs-An-CcD" customClass="FCSettingCell" customModule="FlyCat" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="812" height="64"/>
+            <rect key="frame" x="0.0" y="0.0" width="828" height="64"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fBs-An-CcD" id="S0Q-fX-qc8">
-                <rect key="frame" x="0.0" y="0.0" width="812" height="64"/>
+                <rect key="frame" x="0.0" y="0.0" width="828" height="64"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QEo-AT-Zrp">
-                        <rect key="frame" x="30" y="0.0" width="97" height="64"/>
-                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="40"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QkY-fK-zpO">
+                        <rect key="frame" x="12" y="12" width="137" height="40"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="q1w-2R-juo">
+                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="ZWD-2G-JfB"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QEo-AT-Zrp">
+                                <rect key="frame" x="40" y="0.0" width="97" height="40"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="QEo-AT-Zrp" secondAttribute="bottom" id="9cu-rM-NjJ"/>
-                    <constraint firstItem="QEo-AT-Zrp" firstAttribute="leading" secondItem="S0Q-fX-qc8" secondAttribute="leading" constant="30" id="ATM-IN-d9b"/>
-                    <constraint firstItem="QEo-AT-Zrp" firstAttribute="top" secondItem="S0Q-fX-qc8" secondAttribute="top" id="EiZ-z0-mGj"/>
+                    <constraint firstAttribute="bottom" secondItem="QkY-fK-zpO" secondAttribute="bottom" constant="12" id="3hN-ci-WSy"/>
+                    <constraint firstItem="QkY-fK-zpO" firstAttribute="top" secondItem="S0Q-fX-qc8" secondAttribute="top" constant="12" id="8lz-Te-req"/>
+                    <constraint firstItem="QkY-fK-zpO" firstAttribute="leading" secondItem="S0Q-fX-qc8" secondAttribute="leading" constant="12" id="kDd-LV-NJE"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="1ks-Xo-ai1"/>
             <connections>
+                <outlet property="leftImageView" destination="q1w-2R-juo" id="st7-wO-6h1"/>
                 <outlet property="leftLabel" destination="QEo-AT-Zrp" id="jv6-ct-o73"/>
             </connections>
             <point key="canvasLocation" x="-210" y="-108"/>

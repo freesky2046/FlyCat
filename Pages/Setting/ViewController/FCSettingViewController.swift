@@ -8,6 +8,7 @@
 import UIKit
 import HandyJSON
 import Alamofire
+import Kingfisher
 
 class FCSettingViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
   
@@ -45,30 +46,41 @@ class FCSettingViewController: UIViewController, UITableViewDelegate, UITableVie
     func refreshListInfo() {
         var p:Parameters = [:]
         p["method"] = "uinfo"
-        FCNetworkUtil.request("https://pan.baidu.com/rest/2.0/xpan/nas", method: .get, parameters: p, needAuth: true) { res in
+        FCNetworkUtil.request("https://pan.baidu.com/rest/2.0/xpan/nas", method: .get, parameters: p, needAuth: true) {[weak self] res in
+            guard let self = self else { return }
+            
             switch (res) {
             case .success(let data):
                 print(data)
+                self.handle(data)
             case .failure(let error):
                 print(error)
             }
         };
     }
     
+    func handle(_ data:String) {
+        let res =  FCUserInfo.deserialize(from: data);
+        let item = FCSettingItem()
+        item.name = res?.baidu_name
+//        item.imageUrl = res?.avatar_url
+        dataArray?.insert(item, at: 0)
+        tableView.reloadData()
+    }
+    
+    
     func setupUI() {
         let item1 = FCSettingItem()
         item1.name = "设置"
-        item1.detail = ""
-        item1.showNext = false
         let item2 = FCSettingItem()
         item2.name = "关于"
-        item2.detail = ""
-        item2.showNext = false
         dataArray = NSMutableArray()
+        let item3 = FCSettingItem()
+        item3.name = "退出登录"
         dataArray?.add(item1)
         dataArray?.add(item2)
+        dataArray?.add(item3)
         tableView.reloadData()
-
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -97,6 +109,13 @@ class FCSettingViewController: UIViewController, UITableViewDelegate, UITableVie
         
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let dataArray = self.dataArray, indexPath.row  == dataArray.count - 1 {
+            self.showLoginOutAlert()
+        }
+        
+    }
+    
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         let view = UIView()
         view.backgroundColor = .red
@@ -109,5 +128,9 @@ class FCSettingViewController: UIViewController, UITableViewDelegate, UITableVie
         }else {
             return 0
         }
+    }
+    
+    func showLoginOutAlert() {
+        let alert = UIAlertController(title: "退出登录", message:"", preferredStyle: .alert)
     }
 }
