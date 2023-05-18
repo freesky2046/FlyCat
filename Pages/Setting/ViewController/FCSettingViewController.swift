@@ -6,10 +6,13 @@
 //
 
 import UIKit
+import HandyJSON
+import Alamofire
 
 class FCSettingViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
   
-    var dataArray: NSMutableArray?
+    var dataArray: NSMutableArray?  /// 数据源，要拼装一下给列表使用
+    @IBOutlet weak var leftImageView: UIImageView!
     @IBOutlet weak var tableView: UITableView!
     
     
@@ -29,16 +32,36 @@ class FCSettingViewController: UIViewController, UITableViewDelegate, UITableVie
             tableView.sectionHeaderTopPadding = 0.0;
         }
         tableView.contentInsetAdjustmentBehavior = .never
+        leftImageView.layer.cornerRadius = 113
+        leftImageView.layer.masksToBounds = true
         setupUI()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        refreshListInfo()
+    }
+    
+    func refreshListInfo() {
+        var p:Parameters = [:]
+        p["method"] = "uinfo"
+        FCNetworkUtil.request("https://pan.baidu.com/rest/2.0/xpan/nas", method: .get, parameters: p, needAuth: true) { res in
+            switch (res) {
+            case .success(let data):
+                print(data)
+            case .failure(let error):
+                print(error)
+            }
+        };
     }
     
     func setupUI() {
         let item1 = FCSettingItem()
-        item1.name = "关于"
+        item1.name = "设置"
         item1.detail = ""
         item1.showNext = false
         let item2 = FCSettingItem()
-        item2.name = "退出登录"
+        item2.name = "关于"
         item2.detail = ""
         item2.showNext = false
         dataArray = NSMutableArray()
@@ -50,7 +73,7 @@ class FCSettingViewController: UIViewController, UITableViewDelegate, UITableVie
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
        let cell = tableView.dequeueReusableCell(withIdentifier: "FCSettingCell", for: indexPath) as! FCSettingCell
-       let item = self.dataArray?.object(at: indexPath.row) as! FCSettingItem
+       let item = self.dataArray?.object(at: indexPath.section) as! FCSettingItem
        cell.update(item)
        return cell
     }

@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FCSettingViewController" customModule="FlyCat" customModuleProvider="target">
             <connections>
+                <outlet property="leftImageView" destination="3Gu-cD-6th" id="JaD-yS-XlV"/>
                 <outlet property="tableView" destination="Gtc-PF-OnQ" id="pKA-RI-OdO"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Eym-vH-oyN"/>
             </connections>
@@ -38,7 +39,7 @@
                         <outlet property="delegate" destination="-1" id="EtW-CI-SGO"/>
                     </connections>
                 </tableView>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3Gu-cD-6th">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="setting app icon" translatesAutoresizingMaskIntoConstraints="NO" id="3Gu-cD-6th">
                     <rect key="frame" x="256" y="236" width="540" height="540"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="540" id="0hf-Sb-Fpj"/>
@@ -59,4 +60,7 @@
             <point key="canvasLocation" x="-207" y="-108"/>
         </view>
     </objects>
+    <resources>
+        <image name="setting app icon" width="540" height="540"/>
+    </resources>
 </document>
