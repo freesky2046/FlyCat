@@ -110,7 +110,7 @@ class FCSettingViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let dataArray = self.dataArray, indexPath.row  == dataArray.count - 1 {
+        if let dataArray = self.dataArray, indexPath.section  == dataArray.count - 1 {
             self.showLoginOutAlert()
         }
         
@@ -131,6 +131,15 @@ class FCSettingViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func showLoginOutAlert() {
-        let alert = UIAlertController(title: "退出登录", message:"", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "退出登录", message:"", preferredStyle: .alert)
+        let confirmAction = UIAlertAction(title: "确定", style: .default) { _ in
+            UserDefaults.standard.removeObject(forKey: "fly.cat.token")
+            FCLoginManager.sharedInstance.showLogin()
+        }
+        let cancelAction = UIAlertAction(title: "取消", style: .cancel)
+        alertController.addAction(confirmAction)
+        alertController.addAction(cancelAction)
+        present(alertController, animated: true, completion: nil)
+
     }
 }
