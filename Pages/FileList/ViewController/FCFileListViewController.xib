@@ -12,6 +12,7 @@
                 <outlet property="collectionView" destination="kc8-ke-huP" id="lpp-Pt-t4v"/>
                 <outlet property="emptyStackview" destination="add-qc-o7s" id="uPr-hj-FVb"/>
                 <outlet property="focusButton" destination="t4Q-R5-XCo" id="fxP-fE-Fyq"/>
+                <outlet property="topConstraint" destination="VIc-UJ-1b7" id="Pxx-Ao-XKi"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Eym-vH-oyN"/>
             </connections>
         </placeholder>
@@ -44,7 +45,7 @@
                     </vibrancyEffect>
                 </visualEffectView>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="kc8-ke-huP">
-                    <rect key="frame" x="0.0" y="60" width="1920" height="960"/>
+                    <rect key="frame" x="0.0" y="120" width="1920" height="900"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="V0I-2z-wKJ">
                         <size key="itemSize" width="128" height="128"/>
@@ -76,7 +77,7 @@
                     </constraints>
                     <inset key="contentEdgeInsets" minX="59" minY="20" maxX="40" maxY="20"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                    <state key="normal" backgroundImage="setting">
+                    <state key="normal" image="setting">
                         <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                     <connections>
@@ -88,7 +89,7 @@
                 <constraint firstItem="KyR-mD-hxq" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="0ix-Q2-BVc"/>
                 <constraint firstItem="KyR-mD-hxq" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Mj6-No-6zb"/>
                 <constraint firstAttribute="bottom" secondItem="kc8-ke-huP" secondAttribute="bottom" constant="60" id="SlA-2D-Syg"/>
-                <constraint firstItem="kc8-ke-huP" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="60" id="VIc-UJ-1b7"/>
+                <constraint firstItem="kc8-ke-huP" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="120" id="VIc-UJ-1b7"/>
                 <constraint firstAttribute="trailing" secondItem="KyR-mD-hxq" secondAttribute="trailing" id="YHD-nD-Wse"/>
                 <constraint firstItem="t4Q-R5-XCo" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="60" id="aNG-gz-ZUt"/>
                 <constraint firstItem="add-qc-o7s" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="bTq-Ux-NAC"/>

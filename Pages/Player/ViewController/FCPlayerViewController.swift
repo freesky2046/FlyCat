@@ -113,10 +113,11 @@ class FCPlayerViewController: UIViewController, VLCMediaPlayerDelegate {
     }
     
     func play(path:URL) {
-//        let options = ["--avcodec-hw=any"]
+        let options = ["--cr-average=30000"]
+
 
         let media = VLCMedia(url:path)
-        player = VLCMediaPlayer()
+        player = VLCMediaPlayer(options: options)
         
         player.media = media;
         player.play()
