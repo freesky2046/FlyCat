@@ -11,7 +11,6 @@
             <connections>
                 <outlet property="collectionView" destination="kc8-ke-huP" id="lpp-Pt-t4v"/>
                 <outlet property="emptyStackview" destination="add-qc-o7s" id="uPr-hj-FVb"/>
-                <outlet property="focusButton" destination="t4Q-R5-XCo" id="fxP-fE-Fyq"/>
                 <outlet property="topConstraint" destination="VIc-UJ-1b7" id="Pxx-Ao-XKi"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Eym-vH-oyN"/>
             </connections>
@@ -45,7 +44,7 @@
                     </vibrancyEffect>
                 </visualEffectView>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="kc8-ke-huP">
-                    <rect key="frame" x="0.0" y="120" width="1920" height="900"/>
+                    <rect key="frame" x="0.0" y="60" width="1920" height="960"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="V0I-2z-wKJ">
                         <size key="itemSize" width="128" height="128"/>
@@ -68,33 +67,15 @@
                         </label>
                     </subviews>
                 </stackView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t4Q-R5-XCo" customClass="FCFocusButton" customModule="FlyCat" customModuleProvider="target">
-                    <rect key="frame" x="1740" y="60" width="100" height="60"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="60" id="RFg-oy-GcX"/>
-                        <constraint firstAttribute="width" constant="100" id="rt9-Rf-TFi"/>
-                    </constraints>
-                    <inset key="contentEdgeInsets" minX="59" minY="20" maxX="40" maxY="20"/>
-                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                    <state key="normal" image="setting">
-                        <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </state>
-                    <connections>
-                        <action selector="buttonDidAction:" destination="-1" eventType="primaryActionTriggered" id="83Y-iz-q0V"/>
-                    </connections>
-                </button>
             </subviews>
             <constraints>
                 <constraint firstItem="KyR-mD-hxq" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="0ix-Q2-BVc"/>
                 <constraint firstItem="KyR-mD-hxq" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Mj6-No-6zb"/>
                 <constraint firstAttribute="bottom" secondItem="kc8-ke-huP" secondAttribute="bottom" constant="60" id="SlA-2D-Syg"/>
-                <constraint firstItem="kc8-ke-huP" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="120" id="VIc-UJ-1b7"/>
+                <constraint firstItem="kc8-ke-huP" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="60" id="VIc-UJ-1b7"/>
                 <constraint firstAttribute="trailing" secondItem="KyR-mD-hxq" secondAttribute="trailing" id="YHD-nD-Wse"/>
-                <constraint firstItem="t4Q-R5-XCo" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="60" id="aNG-gz-ZUt"/>
                 <constraint firstItem="add-qc-o7s" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="bTq-Ux-NAC"/>
                 <constraint firstItem="add-qc-o7s" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="bwY-tO-xFA"/>
-                <constraint firstAttribute="trailing" secondItem="t4Q-R5-XCo" secondAttribute="trailing" constant="80" id="gmD-HS-5ek"/>
                 <constraint firstAttribute="bottom" secondItem="KyR-mD-hxq" secondAttribute="bottom" id="wDq-Pl-O6q"/>
                 <constraint firstItem="kc8-ke-huP" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="wUg-hP-JdX"/>
                 <constraint firstAttribute="trailing" secondItem="kc8-ke-huP" secondAttribute="trailing" id="z18-ON-odW"/>
@@ -104,6 +85,5 @@
     </objects>
     <resources>
         <image name="empty" width="560" height="280"/>
-        <image name="setting" width="72" height="62"/>
     </resources>
 </document>

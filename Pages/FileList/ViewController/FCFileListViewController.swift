@@ -12,9 +12,9 @@ import TVVLCKit
 
 
 
-class FCFileListViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout, FCFocusButtonDelegate {
+class FCFileListViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
  
-    @IBOutlet weak var focusButton: FCFocusButton!
+    
     public var parent_path:String = "/"
     public var parent_name:String = "文件列表"
     private var dataArray:[FCVideoListInfo]?
@@ -38,7 +38,6 @@ class FCFileListViewController: UIViewController,UICollectionViewDelegate,UIColl
         collectionView.register(UINib(nibName: "FCVideoCollectionViewHeader", bundle: nil), forSupplementaryViewOfKind:  UICollectionView.elementKindSectionHeader, withReuseIdentifier: "FCVideoCollectionViewHeader")
         collectionView.delegate = self
         collectionView.dataSource = self
-        focusButton.delegate = self
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -189,16 +188,6 @@ class FCFileListViewController: UIViewController,UICollectionViewDelegate,UIColl
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         return CGSize(width: FCConstant.screenWidth - 90 * 2, height: 80)
-    }
-    
-    // MARK: - FocuseButtonDelegate
-    func focuse() {
-
-    }
-    
-    @IBAction func buttonDidAction(_ sender: Any) {
-        let settingVC = FCSettingViewController()
-        navigationController?.pushViewController(settingVC, animated: true)
     }
     
 }
