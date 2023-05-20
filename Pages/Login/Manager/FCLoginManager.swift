@@ -8,8 +8,14 @@
 import Foundation
 import UIKit
 
-class FCLoginManager {
+protocol FCLoginManagerDelegate : AnyObject {
+    func didLogin()
+}
+
+
+class FCLoginManager : FCLoginViewControllerDelegate {
     static let sharedInstance = FCLoginManager()
+    weak var delegate:FCLoginManagerDelegate?
     
     private init() {
         // 初始化代码
@@ -22,9 +28,13 @@ class FCLoginManager {
         }
         else {
             let login = FCLoginViewController.build()
+            login.delegate = self
             vc.navigationController?.present(login, animated: true)
-            
         }
+    }
+    
+    internal func didLogin() {
+        self.delegate?.didLogin()
     }
     
     

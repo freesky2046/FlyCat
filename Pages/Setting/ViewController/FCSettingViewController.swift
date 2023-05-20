@@ -10,7 +10,7 @@ import HandyJSON
 import Alamofire
 import Kingfisher
 
-class FCSettingViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class FCSettingViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, FCLoginManagerDelegate {
   
     var dataArray: NSMutableArray?  /// 数据源，要拼装一下给列表使用
     @IBOutlet weak var leftImageView: UIImageView!
@@ -135,11 +135,15 @@ class FCSettingViewController: UIViewController, UITableViewDelegate, UITableVie
         let confirmAction = UIAlertAction(title: "确定", style: .default) { _ in
             UserDefaults.standard.removeObject(forKey: "fly.cat.token")
             FCLoginManager.sharedInstance.showLogin()
+            FCLoginManager.sharedInstance.delegate = self
         }
         let cancelAction = UIAlertAction(title: "取消", style: .cancel)
         alertController.addAction(confirmAction)
         alertController.addAction(cancelAction)
         present(alertController, animated: true, completion: nil)
-
+    }
+    
+    func didLogin() {
+        UIViewController.popToHomeViewController()
     }
 }

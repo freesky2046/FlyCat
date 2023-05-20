@@ -34,6 +34,10 @@
 		68ADC0CA2A1515E300B47438 /* FCFocusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68ADC0C92A1515E300B47438 /* FCFocusButton.swift */; };
 		68ADC0CC2A15193000B47438 /* FCSettingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68ADC0CB2A15193000B47438 /* FCSettingItem.swift */; };
 		68ADC0CE2A15210D00B47438 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68ADC0CD2A15210D00B47438 /* Colors.swift */; };
+		68CE2AFF2A184CE70042837B /* FCHomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68CE2AFA2A184CE70042837B /* FCHomeCollectionViewCell.xib */; };
+		68CE2B002A184CE70042837B /* FCHomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CE2AFB2A184CE70042837B /* FCHomeCollectionViewCell.swift */; };
+		68CE2B012A184CE70042837B /* FCHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CE2AFD2A184CE70042837B /* FCHomeViewController.swift */; };
+		68CE2B022A184CE70042837B /* FCHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68CE2AFE2A184CE70042837B /* FCHomeViewController.xib */; };
 		68CE6F1C29F3D47700DBE8F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68CE6F1629F3D47700DBE8F6 /* Assets.xcassets */; };
 		68CE6F1D29F3D47700DBE8F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68CE6F1729F3D47700DBE8F6 /* LaunchScreen.storyboard */; };
 		68CE6F1F29F3D47700DBE8F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CE6F1B29F3D47700DBE8F6 /* AppDelegate.swift */; };
@@ -84,6 +88,10 @@
 		68ADC0C92A1515E300B47438 /* FCFocusButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCFocusButton.swift; sourceTree = "<group>"; };
 		68ADC0CB2A15193000B47438 /* FCSettingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCSettingItem.swift; sourceTree = "<group>"; };
 		68ADC0CD2A15210D00B47438 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		68CE2AFA2A184CE70042837B /* FCHomeCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FCHomeCollectionViewCell.xib; sourceTree = "<group>"; };
+		68CE2AFB2A184CE70042837B /* FCHomeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FCHomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		68CE2AFD2A184CE70042837B /* FCHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FCHomeViewController.swift; sourceTree = "<group>"; };
+		68CE2AFE2A184CE70042837B /* FCHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FCHomeViewController.xib; sourceTree = "<group>"; };
 		68CE6F0029F3D42C00DBE8F6 /* FlyCat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlyCat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68CE6F1629F3D47700DBE8F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		68CE6F1829F3D47700DBE8F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -292,6 +300,33 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		68CE2AF82A184CE60042837B /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				68CE2AF92A184CE70042837B /* View */,
+				68CE2AFC2A184CE70042837B /* ViewController */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		68CE2AF92A184CE70042837B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				68CE2AFA2A184CE70042837B /* FCHomeCollectionViewCell.xib */,
+				68CE2AFB2A184CE70042837B /* FCHomeCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		68CE2AFC2A184CE70042837B /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				68CE2AFD2A184CE70042837B /* FCHomeViewController.swift */,
+				68CE2AFE2A184CE70042837B /* FCHomeViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		68CE6EF729F3D42C00DBE8F6 = {
 			isa = PBXGroup;
 			children = (
@@ -325,6 +360,7 @@
 		68CE6F2229F3D5BC00DBE8F6 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
+				68CE2AF82A184CE60042837B /* Home */,
 				68ADC0B72A13AC2300B47438 /* Setting */,
 				6863ADF22A07835700446A13 /* Player */,
 				68E7C5A129FAC195004D94CF /* FileList */,
@@ -471,8 +507,10 @@
 				68ADC0C22A13ACFD00B47438 /* FCSettingViewController.xib in Resources */,
 				68488A3D2A0783C8003C64DF /* FCPlayerViewController.xib in Resources */,
 				6863ADDE2A052EA900446A13 /* FCVideoItemCell.xib in Resources */,
+				68CE2AFF2A184CE70042837B /* FCHomeCollectionViewCell.xib in Resources */,
 				6863ADC02A02AC1800446A13 /* FCFileListViewController.xib in Resources */,
 				68CE6F1D29F3D47700DBE8F6 /* LaunchScreen.storyboard in Resources */,
+				68CE2B022A184CE70042837B /* FCHomeViewController.xib in Resources */,
 				68CE6F3329F3D64C00DBE8F6 /* FCLoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -485,11 +523,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				68357B552A094C30008AE463 /* FCPlayerInfo.swift in Sources */,
+				68CE2B002A184CE70042837B /* FCHomeCollectionViewCell.swift in Sources */,
 				68ADC0CE2A15210D00B47438 /* Colors.swift in Sources */,
 				6863ADDD2A052EA900446A13 /* FCVideoItemCell.swift in Sources */,
 				6863ADE52A053EBC00446A13 /* UIViewController+Ext.swift in Sources */,
 				6863ADE02A053BDF00446A13 /* FCConstant.swift in Sources */,
 				6863ADE32A053E6000446A13 /* FCLoginManager.swift in Sources */,
+				68CE2B012A184CE70042837B /* FCHomeViewController.swift in Sources */,
 				68488A3C2A0783C8003C64DF /* FCPlayerViewController.swift in Sources */,
 				68ADC0C52A13D16D00B47438 /* FCSettingCell.swift in Sources */,
 				6863ADD72A03DCA300446A13 /* FCDeviceCodeInfo.swift in Sources */,

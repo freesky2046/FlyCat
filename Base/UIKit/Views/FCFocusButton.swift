@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol FCFocusButtonDelegate: NSObjectProtocol {
+protocol FCFocusButtonDelegate : AnyObject{
     func focuse()
 }
  

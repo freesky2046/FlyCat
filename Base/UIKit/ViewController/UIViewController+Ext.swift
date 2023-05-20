@@ -58,4 +58,25 @@ extension UIViewController {
         }
         return nil
     }
+    
+    static func popToHomeViewController() {
+        let vc = topMostViewController()
+        guard let navigationController = vc.navigationController else {
+            return
+        }
+
+        func popToHomeViewController(from viewController: UIViewController) {
+            if viewController is FCHomeViewController {
+                navigationController.popToViewController(viewController, animated: true)
+            } else if let presentedViewController = viewController.presentedViewController {
+                popToHomeViewController(from: presentedViewController)
+            } else if let lastViewController = navigationController.viewControllers.first(where: { $0 != viewController }) {
+                navigationController.popToViewController(lastViewController, animated: true)
+            }
+        }
+
+        if let lastViewController = navigationController.viewControllers.last {
+            popToHomeViewController(from: lastViewController)
+        }
+    }
 }

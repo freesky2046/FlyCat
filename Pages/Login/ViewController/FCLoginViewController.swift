@@ -9,6 +9,10 @@ import UIKit
 import CoreImage
 import Alamofire
 
+protocol FCLoginViewControllerDelegate:AnyObject  {
+    func didLogin()
+}
+
 class FCLoginViewController: UIViewController {
     
     @IBOutlet weak var qrImageView: UIImageView!
@@ -16,6 +20,7 @@ class FCLoginViewController: UIViewController {
     var finalTimes = 200
     var times = 0;
     var device_code:String?
+    weak var delegate:FCLoginViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -88,8 +93,9 @@ class FCLoginViewController: UIViewController {
                     self?.destroyTimer();
                     let data = DataConverter.convert(model: tokenInfo!) /// model --- jsonstring--->data
                     UserDefaults.standard.set(data, forKey: "fly.cat.token")
-                    
-                    self?.dismiss(animated: true)
+                    self?.dismiss(animated: true, completion: {
+                        self?.delegate?.didLogin()
+                    })                    
                 }
                 
             case .failure(let error):
