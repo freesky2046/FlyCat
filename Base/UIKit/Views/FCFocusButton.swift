@@ -19,8 +19,12 @@ class FCFocusButton: UIButton {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        focusBackgroundColor = UIColor.yellow
+        focusBackgroundColor = UIColor.black
         normalBackgroundColor = UIColor.clear
+        self.setImage(UIImage(named: "setting_focused"), for: .focused)
+        self.setImage(UIImage(named: "setting"), for: .normal)
+        self.setImage(UIImage(named: "setting"), for: .highlighted)
+
     }
     
     override func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {

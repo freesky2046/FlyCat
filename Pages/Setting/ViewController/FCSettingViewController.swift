@@ -35,7 +35,7 @@ class FCSettingViewController: UIViewController, UITableViewDelegate, UITableVie
         tableView.contentInsetAdjustmentBehavior = .never
         leftImageView.layer.cornerRadius = 113
         leftImageView.layer.masksToBounds = true
-        setupUI()
+
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -60,28 +60,23 @@ class FCSettingViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func handle(_ data:String) {
+//        let item1 = FCSettingItem()
+//        item1.name = "设置"
+//        let item2 = FCSettingItem()
+//        item2.name = "关于"
+        dataArray = NSMutableArray()
+        let item3 = FCSettingItem()
+        item3.name = "更换账号"
+//        dataArray?.add(item1)
+//        dataArray?.add(item2)
+        dataArray?.add(item3)
         let res =  FCUserInfo.deserialize(from: data);
         let item = FCSettingItem()
         item.name = res?.baidu_name
-//        item.imageUrl = res?.avatar_url
         dataArray?.insert(item, at: 0)
         tableView.reloadData()
     }
     
-    
-    func setupUI() {
-        let item1 = FCSettingItem()
-        item1.name = "设置"
-        let item2 = FCSettingItem()
-        item2.name = "关于"
-        dataArray = NSMutableArray()
-        let item3 = FCSettingItem()
-        item3.name = "退出登录"
-        dataArray?.add(item1)
-        dataArray?.add(item2)
-        dataArray?.add(item3)
-        tableView.reloadData()
-    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
        let cell = tableView.dequeueReusableCell(withIdentifier: "FCSettingCell", for: indexPath) as! FCSettingCell
@@ -131,7 +126,7 @@ class FCSettingViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func showLoginOutAlert() {
-        let alertController = UIAlertController(title: "退出登录", message:"", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "更换账号", message:"", preferredStyle: .alert)
         let confirmAction = UIAlertAction(title: "确定", style: .default) { _ in
             UserDefaults.standard.removeObject(forKey: "fly.cat.token")
             FCLoginManager.sharedInstance.showLogin()

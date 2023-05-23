@@ -86,6 +86,9 @@ class FCHomeViewController: UIViewController,UICollectionViewDelegate,UICollecti
                             self?.collectionView.isHidden = false
                         }
                         self?.reloadData()
+                        if let firstCell = self?.collectionView.cellForItem(at: IndexPath(item: 0, section: 0)) {
+                              firstCell.becomeFirstResponder()
+                          }
                     }
                 }else {
                     self?.showError()
@@ -182,6 +185,8 @@ class FCHomeViewController: UIViewController,UICollectionViewDelegate,UICollecti
         let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "FCVideoCollectionViewHeader", for: indexPath) as! FCVideoCollectionViewHeader
         // 更新标题
         headerView.leftLabel.text = parent_name
+        headerView.detailLabel.text = "仅显示视频文件"
+
         return headerView
     }
     
@@ -199,4 +204,7 @@ class FCHomeViewController: UIViewController,UICollectionViewDelegate,UICollecti
         navigationController?.pushViewController(settingVC, animated: true)
     }
     
+    override var preferredFocusEnvironments: [UIFocusEnvironment] {
+        return [collectionView]
+    }
 }

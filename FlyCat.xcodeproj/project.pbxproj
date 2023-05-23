@@ -38,6 +38,8 @@
 		68CE2B002A184CE70042837B /* FCHomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CE2AFB2A184CE70042837B /* FCHomeCollectionViewCell.swift */; };
 		68CE2B012A184CE70042837B /* FCHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CE2AFD2A184CE70042837B /* FCHomeViewController.swift */; };
 		68CE2B022A184CE70042837B /* FCHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68CE2AFE2A184CE70042837B /* FCHomeViewController.xib */; };
+		68CE2B052A18788A0042837B /* FCPlayControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CE2B042A18788A0042837B /* FCPlayControlView.swift */; };
+		68CE2B072A1878B10042837B /* FCPlayControlView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68CE2B062A1878B10042837B /* FCPlayControlView.xib */; };
 		68CE6F1C29F3D47700DBE8F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68CE6F1629F3D47700DBE8F6 /* Assets.xcassets */; };
 		68CE6F1D29F3D47700DBE8F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68CE6F1729F3D47700DBE8F6 /* LaunchScreen.storyboard */; };
 		68CE6F1F29F3D47700DBE8F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CE6F1B29F3D47700DBE8F6 /* AppDelegate.swift */; };
@@ -92,6 +94,8 @@
 		68CE2AFB2A184CE70042837B /* FCHomeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FCHomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		68CE2AFD2A184CE70042837B /* FCHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FCHomeViewController.swift; sourceTree = "<group>"; };
 		68CE2AFE2A184CE70042837B /* FCHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FCHomeViewController.xib; sourceTree = "<group>"; };
+		68CE2B042A18788A0042837B /* FCPlayControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCPlayControlView.swift; sourceTree = "<group>"; };
+		68CE2B062A1878B10042837B /* FCPlayControlView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FCPlayControlView.xib; sourceTree = "<group>"; };
 		68CE6F0029F3D42C00DBE8F6 /* FlyCat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlyCat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68CE6F1629F3D47700DBE8F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		68CE6F1829F3D47700DBE8F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -249,6 +253,7 @@
 		6863ADF22A07835700446A13 /* Player */ = {
 			isa = PBXGroup;
 			children = (
+				68CE2B032A1878670042837B /* View */,
 				68357B532A094B9C008AE463 /* Model */,
 				6863ADF32A07836000446A13 /* ViewController */,
 			);
@@ -325,6 +330,15 @@
 				68CE2AFE2A184CE70042837B /* FCHomeViewController.xib */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		68CE2B032A1878670042837B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				68CE2B042A18788A0042837B /* FCPlayControlView.swift */,
+				68CE2B062A1878B10042837B /* FCPlayControlView.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		68CE6EF729F3D42C00DBE8F6 = {
@@ -502,6 +516,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				68ADC0C62A13D16D00B47438 /* FCSettingCell.xib in Resources */,
+				68CE2B072A1878B10042837B /* FCPlayControlView.xib in Resources */,
 				6863ADEF2A07317C00446A13 /* FCVideoCollectionViewHeader.xib in Resources */,
 				68CE6F1C29F3D47700DBE8F6 /* Assets.xcassets in Resources */,
 				68ADC0C22A13ACFD00B47438 /* FCSettingViewController.xib in Resources */,
@@ -523,6 +538,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				68357B552A094C30008AE463 /* FCPlayerInfo.swift in Sources */,
+				68CE2B052A18788A0042837B /* FCPlayControlView.swift in Sources */,
 				68CE2B002A184CE70042837B /* FCHomeCollectionViewCell.swift in Sources */,
 				68ADC0CE2A15210D00B47438 /* Colors.swift in Sources */,
 				6863ADDD2A052EA900446A13 /* FCVideoItemCell.swift in Sources */,

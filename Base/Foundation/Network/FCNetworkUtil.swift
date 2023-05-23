@@ -57,11 +57,14 @@ class FCNetworkUtil  {
             case .success(let data):
                 complete?(.success(data))
             case .failure(let error):
-                complete?(.failure(error))
+                if(error.responseCode == 6) {
+                    FCLoginManager.sharedInstance.showLogin()
+                }else {
+                    complete?(.failure(error))
+                }
             }
         };
     }
-    
     static func userToken() -> FCTokenInfo? {
         let data = UserDefaults.standard.value(forKey: "fly.cat.token")
         if data == nil {
@@ -71,5 +74,4 @@ class FCNetworkUtil  {
         let tokenInfo =  FCTokenInfo.deserialize(from: str)
         return tokenInfo
     }
-
 }

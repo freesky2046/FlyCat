@@ -14,8 +14,9 @@ class FCPlayerViewController: UIViewController, VLCMediaPlayerDelegate {
     public var path:String? = "/"
     public var adToken:String? = ""
     private var stage:Int = 1
+    private var controlView:FCPlayControlView?
+    private var playerView:UIView?
     var player:VLCMediaPlayer!
-
     
     static func build() -> FCPlayerViewController {
         let vc = FCPlayerViewController(nibName: "FCPlayerViewController", bundle: nil)
@@ -24,7 +25,9 @@ class FCPlayerViewController: UIViewController, VLCMediaPlayerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        let playerview = UIView.init(frame: CGRect(x: 0, y: 0, width: FCConstant.screenWidth, height: FCConstant.screenHeight))
+        view.addSubview(playerview)
+        playerView = playerview
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -83,30 +86,18 @@ class FCPlayerViewController: UIViewController, VLCMediaPlayerDelegate {
                         if let cacheDirectory = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first {
                              fileURL = cacheDirectory.appendingPathComponent("filename.txt")
                             do {
-//                                try data.write(to: fileURL)
                                 try data.write(to: fileURL!, atomically: true, encoding: .utf8)
                             } catch {
                                 return
                             }
                         }
-//                        let fileUrl = URL(string: "http://live.shaoxing.com.cn/video/s10001-sxtv2/index.m3u8?channel=")
-//                        self?.play(path: fileUrl)
-//                        self.p
+
                         self?.play(path:fileURL!)
                         
                     }
                     
                 case .failure(let error):
                     print(error)
-                    
-//                    if self?.stage == 2 && playerInfo != nil {
-//                        if let errno = playerInfo!.errno {
-//                            if(errno == 31341) {
-//                                self?.waiting()
-//                                return
-//                            }
-//                        }
-//                    }
                 }
             }
         }
@@ -114,31 +105,41 @@ class FCPlayerViewController: UIViewController, VLCMediaPlayerDelegate {
     
     func play(path:URL) {
         let options = ["--cr-average=30000"]
-
-
         let media = VLCMedia(url:path)
         player = VLCMediaPlayer(options: options)
-        
         player.media = media;
         player.play()
         player.delegate = self
-//        player.scaleFactor = 0.5
-//        player.videoAspectRatio = "16:9"
         
-        let playerview = UIView.init(frame: CGRect(x: 0, y: 0, width: FCConstant.screenWidth, height: FCConstant.screenHeight))
-        self.view.addSubview(playerview)
-        player.drawable = playerview
+        player.drawable = playerView
     }
     
-    func waiting() {
-        print("轮询转码")
-    }
+
+    func mediaPlayerStateChanged(_ aNotification: Notification!) {
+           if player.state == .playing {
+               // 播放中
+               print("播放中");
+           } else if player.state == .paused {
+               // 暂停中
+               print("暂停中")
+           } else if player.state == .stopped {
+               // 停止播放
+               print("停止播放")
+           }else if player.state == .opening{
+               print("开始")
+               controlView?.isHidden = false
+           }
+       }
+       
+       func mediaPlayerTimeChanged(_ aNotification: Notification!) {
+           // 媒体播放时间发生变化时被调用
+//           let time = player.time.value
+           
+           let currentTime = self.player.time.value
+//           let totalTime = self.player.media.length.value
+           print(currentTime)
+//           print(totalTime)
+
+       }
     
-    func mediaPlayerStateChanged(_ aNotification: Notification) {
-        let player = aNotification.object as? VLCMediaPlayer
-        
-        print(aNotification)
-    }
-//    @objc
-//    - (void)mediaPlayerStateChanged:(NSNotification *)aNotification;
 }
