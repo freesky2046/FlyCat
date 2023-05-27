@@ -83,6 +83,7 @@
 		6863ADE42A053EBC00446A13 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		6863ADEC2A07317C00446A13 /* FCVideoCollectionViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCVideoCollectionViewHeader.swift; sourceTree = "<group>"; };
 		6863ADED2A07317C00446A13 /* FCVideoCollectionViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FCVideoCollectionViewHeader.xib; sourceTree = "<group>"; };
+		68A93D312A21A5B800AA8C90 /* FlyCat-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "FlyCat-Info.plist"; sourceTree = "<group>"; };
 		68ADC0BF2A13ACFD00B47438 /* FCSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCSettingViewController.swift; sourceTree = "<group>"; };
 		68ADC0C02A13ACFD00B47438 /* FCSettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FCSettingViewController.xib; sourceTree = "<group>"; };
 		68ADC0C32A13D16D00B47438 /* FCSettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCSettingCell.swift; sourceTree = "<group>"; };
@@ -344,6 +345,7 @@
 		68CE6EF729F3D42C00DBE8F6 = {
 			isa = PBXGroup;
 			children = (
+				68A93D312A21A5B800AA8C90 /* FlyCat-Info.plist */,
 				68E6FD402A0D25840094F9DB /* Vendor */,
 				68CE6F2629F3D5C400DBE8F6 /* Base */,
 				68CE6F2229F3D5BC00DBE8F6 /* Pages */,
@@ -701,6 +703,7 @@
 				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 8P23C332Y5;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "FlyCat-Info.plist";
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -728,6 +731,7 @@
 				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 8P23C332Y5;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "FlyCat-Info.plist";
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
 				LD_RUNPATH_SEARCH_PATHS = (
