@@ -1,18 +1,22 @@
 {
   "images" : [
     {
+      "filename" : "shelf width@1x.png",
       "idiom" : "tv",
       "scale" : "1x"
     },
     {
+      "filename" : "shelf width@2x.png",
       "idiom" : "tv",
       "scale" : "2x"
     },
     {
+      "filename" : "shelf width@1x 1.png",
       "idiom" : "tv-marketing",
       "scale" : "1x"
     },
     {
+      "filename" : "shelf width@2x 1.png",
       "idiom" : "tv-marketing",
       "scale" : "2x"
     }
