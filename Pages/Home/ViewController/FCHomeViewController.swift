@@ -54,7 +54,7 @@ class FCHomeViewController: UIViewController,UICollectionViewDelegate,UICollecti
                 let login:FCLoginViewController? = FCLoginViewController.build();
                 self.present(login!, animated: true)
             }
-            let cancelAction = UIAlertAction(title: "回到首页", style: .cancel) {_ in
+            let cancelAction = UIAlertAction(title: "不登录,回到首页", style: .cancel) {_ in
                 self.navigationController?.popViewController(animated: true)
             }
             alertController.addAction(confirmAction)
