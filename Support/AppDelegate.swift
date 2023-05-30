@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow();
-        let vc = FCHomeViewController.build()
+        let vc = FCFirstViewController.build()
         let nav = UINavigationController(rootViewController: vc!)
         nav.setNavigationBarHidden(true, animated: false)
         window?.rootViewController = nav

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.XIB" version="3.0" toolsVersion="21507" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="appleTV" appearance="light"/>
+    <dependencies>
+        <deployment identifier="tvOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FCURLViewController" customModule="FlyCat" customModuleProvider="target">
+            <connections>
+                <outlet property="confirmButton" destination="QGv-J2-Knv" id="kI4-YM-5aB"/>
+                <outlet property="textField" destination="bza-a1-z2c" id="MRa-0S-4o0"/>
+                <outlet property="view" destination="iN0-l3-epB" id="Eym-vH-oyN"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入m3u8链接" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bza-a1-z2c">
+                    <rect key="frame" x="170" y="276" width="1580" height="67"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="67" id="cad-KH-knB"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QGv-J2-Knv">
+                    <rect key="frame" x="882" y="685" width="157" height="86"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="确定"/>
+                    <connections>
+                        <action selector="confirmAction:" destination="-1" eventType="primaryActionTriggered" id="oSA-ed-Ai9"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="nkI-NY-t1X"/>
+            <constraints>
+                <constraint firstItem="bza-a1-z2c" firstAttribute="top" secondItem="nkI-NY-t1X" secondAttribute="top" constant="216" id="Pww-pa-Pyy"/>
+                <constraint firstItem="nkI-NY-t1X" firstAttribute="trailing" secondItem="bza-a1-z2c" secondAttribute="trailing" constant="90" id="Wx9-4O-KMy"/>
+                <constraint firstItem="bza-a1-z2c" firstAttribute="leading" secondItem="nkI-NY-t1X" secondAttribute="leading" constant="90" id="aen-Mh-mLj"/>
+            </constraints>
+            <point key="canvasLocation" x="166" y="-110"/>
+        </view>
+    </objects>
+</document>

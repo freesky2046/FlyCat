@@ -16,10 +16,49 @@
 default_platform(:ios)
 
 platform :ios do
-  desc "Push a new release build to the App Store"
-  lane :release do
-    increment_build_number(xcodeproj: "FlyCat.xcodeproj")
-    build_app(scheme: "FlyCat")
-    upload_to_app_store(skip_metadata: true, skip_screenshots: true)
+  
+lane :release do
+   increment_build_number
+   gym(
+      scheme: "FlyCat",
+      # 打包前clean
+      clean: true,
+      # Release、Debug、自定义
+      configuration: "Release",
+      # app-store, ad-hoc, package, enterprise, development
+      export_method: "app-store",
+      # 文件输出路径
+      output_directory: "/Users/zhouming/Desktop/",
+      # ipa名称
+      output_name: "app.ipa",
+      # 是否包含调试符号
+      include_symbols: true,
+      # 是否开启bitcode
+      include_bitcode: false,
+    )
+    deliver(
+      #用户名
+      username:"freesky0418@163.com",
+      #ipa：指定应用程序的ipa包路径，可以是本地路径或者是远程的URL。
+      # 例如：ipa: "./path/to/your/app.ipa"
+      ipa:"/Users/zhouming/Desktop/app.ipa",
+      # metadata_path：指定应用程序的元数据（包括应用程序的图标、名称、描述等）的路径。
+      # metadata_path: "./metadata"
+      #是否跳过截图上传步骤。如果设置为true，则不会自动上传应用截图到App Store
+      skip_screenshots:true,
+      # submit_for_review：是否提交应用程序进行审核
+      #如果设置为false，则只是将应用程序上传到iTunes Connect，但不会提交审核
+      submit_for_review:false,
+      #automatic_release：是否自动发布应用程序。
+      #如果设置为true，则应用程序审核通过后会自动发布到App Store。如果设置为false，则需要手动发布
+      automatic_release:false,
+      force:true,
+      platform:"appletvos"
+    )
+   slack(
+      message: "上传打包成功！",
+      success: true, #指定通知类型为成功状态
+      slack_url: "https://hooks.slack.com/services/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" # 替换为您在Slack上创建的Webhook URL
+    )
   end
 end

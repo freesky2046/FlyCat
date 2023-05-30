@@ -1,8 +1,6 @@
-app_identifier("com.freesky.flycat") # The bundle identifier of your app
-apple_id("freesky0418@163.com") # Your Apple Developer Portal username
+# app_identifier("[[APP_IDENTIFIER]]") # The bundle identifier of your app
+# apple_id("[[APPLE_ID]]") # Your Apple Developer Portal username
 
-itc_team_id("126285134") # App Store Connect Team ID
-team_id("8P23C332Y5") # Developer Portal Team ID
 
 # For more information about the Appfile, see:
 #     https://docs.fastlane.tools/advanced/#appfile

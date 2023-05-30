@@ -11,6 +11,12 @@
 		68488A3C2A0783C8003C64DF /* FCPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68488A3A2A0783C8003C64DF /* FCPlayerViewController.swift */; };
 		68488A3D2A0783C8003C64DF /* FCPlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68488A3B2A0783C8003C64DF /* FCPlayerViewController.xib */; };
 		6850333E29FAA4E1000CEEB5 /* HandyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 6850333D29FAA4E1000CEEB5 /* HandyJSON */; };
+		68514F7A2A2622490079EE20 /* FCFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68514F782A2622490079EE20 /* FCFirstViewController.swift */; };
+		68514F7B2A2622490079EE20 /* FCFirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68514F792A2622490079EE20 /* FCFirstViewController.xib */; };
+		68514F812A2625530079EE20 /* FCURLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68514F7F2A2625530079EE20 /* FCURLViewController.swift */; };
+		68514F822A2625530079EE20 /* FCURLViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68514F802A2625530079EE20 /* FCURLViewController.xib */; };
+		68514F872A2628CC0079EE20 /* FCURLPlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68514F852A2628CC0079EE20 /* FCURLPlayViewController.swift */; };
+		68514F882A2628CC0079EE20 /* FCURLPlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 68514F862A2628CC0079EE20 /* FCURLPlayViewController.xib */; };
 		6863ADC02A02AC1800446A13 /* FCFileListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6863ADBF2A02AC1800446A13 /* FCFileListViewController.xib */; };
 		6863ADC32A02B98000446A13 /* FCVideoListInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6863ADC22A02B98000446A13 /* FCVideoListInfo.swift */; };
 		6863ADD52A03DCA300446A13 /* FCQRBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6863ADCE2A03DCA300446A13 /* FCQRBuilder.swift */; };
@@ -68,6 +74,12 @@
 		68357B542A094C30008AE463 /* FCPlayerInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCPlayerInfo.swift; sourceTree = "<group>"; };
 		68488A3A2A0783C8003C64DF /* FCPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCPlayerViewController.swift; sourceTree = "<group>"; };
 		68488A3B2A0783C8003C64DF /* FCPlayerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FCPlayerViewController.xib; sourceTree = "<group>"; };
+		68514F782A2622490079EE20 /* FCFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCFirstViewController.swift; sourceTree = "<group>"; };
+		68514F792A2622490079EE20 /* FCFirstViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FCFirstViewController.xib; sourceTree = "<group>"; };
+		68514F7F2A2625530079EE20 /* FCURLViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCURLViewController.swift; sourceTree = "<group>"; };
+		68514F802A2625530079EE20 /* FCURLViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FCURLViewController.xib; sourceTree = "<group>"; };
+		68514F852A2628CC0079EE20 /* FCURLPlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCURLPlayViewController.swift; sourceTree = "<group>"; };
+		68514F862A2628CC0079EE20 /* FCURLPlayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FCURLPlayViewController.xib; sourceTree = "<group>"; };
 		68592A972A0F317A00F810D2 /* TVVLCKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = TVVLCKit.xcframework; path = "../../../Downloads/TVVLCKit-binary 3/TVVLCKit.xcframework"; sourceTree = "<group>"; };
 		68592A9B2A0F323300F810D2 /* FlyCat-Bridging-header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FlyCat-Bridging-header.h"; sourceTree = "<group>"; };
 		6863ADBF2A02AC1800446A13 /* FCFileListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FCFileListViewController.xib; sourceTree = "<group>"; };
@@ -127,6 +139,57 @@
 				68357B542A094C30008AE463 /* FCPlayerInfo.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		68514F6F2A2621100079EE20 /* First */ = {
+			isa = PBXGroup;
+			children = (
+				68514F712A26215B0079EE20 /* View */,
+				68514F702A2621550079EE20 /* ViewController */,
+			);
+			path = First;
+			sourceTree = "<group>";
+		};
+		68514F702A2621550079EE20 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				68514F782A2622490079EE20 /* FCFirstViewController.swift */,
+				68514F792A2622490079EE20 /* FCFirstViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		68514F712A26215B0079EE20 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		68514F7C2A2624E50079EE20 /* URL */ = {
+			isa = PBXGroup;
+			children = (
+				68514F7F2A2625530079EE20 /* FCURLViewController.swift */,
+				68514F802A2625530079EE20 /* FCURLViewController.xib */,
+			);
+			path = URL;
+			sourceTree = "<group>";
+		};
+		68514F832A26282A0079EE20 /* URLPlay */ = {
+			isa = PBXGroup;
+			children = (
+				68514F842A2628410079EE20 /* ViewController */,
+			);
+			path = URLPlay;
+			sourceTree = "<group>";
+		};
+		68514F842A2628410079EE20 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				68514F852A2628CC0079EE20 /* FCURLPlayViewController.swift */,
+				68514F862A2628CC0079EE20 /* FCURLPlayViewController.xib */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		6863ADC12A02AC3800446A13 /* Model */ = {
@@ -376,6 +439,9 @@
 		68CE6F2229F3D5BC00DBE8F6 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
+				68514F832A26282A0079EE20 /* URLPlay */,
+				68514F7C2A2624E50079EE20 /* URL */,
+				68514F6F2A2621100079EE20 /* First */,
 				68CE2AF82A184CE60042837B /* Home */,
 				68ADC0B72A13AC2300B47438 /* Setting */,
 				6863ADF22A07835700446A13 /* Player */,
@@ -518,16 +584,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				68ADC0C62A13D16D00B47438 /* FCSettingCell.xib in Resources */,
+				68514F822A2625530079EE20 /* FCURLViewController.xib in Resources */,
 				68CE2B072A1878B10042837B /* FCPlayControlView.xib in Resources */,
 				6863ADEF2A07317C00446A13 /* FCVideoCollectionViewHeader.xib in Resources */,
 				68CE6F1C29F3D47700DBE8F6 /* Assets.xcassets in Resources */,
 				68ADC0C22A13ACFD00B47438 /* FCSettingViewController.xib in Resources */,
 				68488A3D2A0783C8003C64DF /* FCPlayerViewController.xib in Resources */,
 				6863ADDE2A052EA900446A13 /* FCVideoItemCell.xib in Resources */,
+				68514F7B2A2622490079EE20 /* FCFirstViewController.xib in Resources */,
 				68CE2AFF2A184CE70042837B /* FCHomeCollectionViewCell.xib in Resources */,
 				6863ADC02A02AC1800446A13 /* FCFileListViewController.xib in Resources */,
 				68CE6F1D29F3D47700DBE8F6 /* LaunchScreen.storyboard in Resources */,
 				68CE2B022A184CE70042837B /* FCHomeViewController.xib in Resources */,
+				68514F882A2628CC0079EE20 /* FCURLPlayViewController.xib in Resources */,
 				68CE6F3329F3D64C00DBE8F6 /* FCLoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -546,11 +615,13 @@
 				6863ADDD2A052EA900446A13 /* FCVideoItemCell.swift in Sources */,
 				6863ADE52A053EBC00446A13 /* UIViewController+Ext.swift in Sources */,
 				6863ADE02A053BDF00446A13 /* FCConstant.swift in Sources */,
+				68514F812A2625530079EE20 /* FCURLViewController.swift in Sources */,
 				6863ADE32A053E6000446A13 /* FCLoginManager.swift in Sources */,
 				68CE2B012A184CE70042837B /* FCHomeViewController.swift in Sources */,
 				68488A3C2A0783C8003C64DF /* FCPlayerViewController.swift in Sources */,
 				68ADC0C52A13D16D00B47438 /* FCSettingCell.swift in Sources */,
 				6863ADD72A03DCA300446A13 /* FCDeviceCodeInfo.swift in Sources */,
+				68514F872A2628CC0079EE20 /* FCURLPlayViewController.swift in Sources */,
 				68ADC0CC2A15193000B47438 /* FCSettingItem.swift in Sources */,
 				6863ADD62A03DCA300446A13 /* FCNetworkUtil.swift in Sources */,
 				68ADC0CA2A1515E300B47438 /* FCFocusButton.swift in Sources */,
@@ -561,6 +632,7 @@
 				6863ADD92A03DFF100446A13 /* DataConverter.swift in Sources */,
 				6863ADC32A02B98000446A13 /* FCVideoListInfo.swift in Sources */,
 				68ADC0C12A13ACFD00B47438 /* FCSettingViewController.swift in Sources */,
+				68514F7A2A2622490079EE20 /* FCFirstViewController.swift in Sources */,
 				6863ADD52A03DCA300446A13 /* FCQRBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -704,7 +776,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 45;
+				CURRENT_PROJECT_VERSION = 61;
 				DEVELOPMENT_TEAM = 8P23C332Y5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "FlyCat-Info.plist";
@@ -735,7 +807,7 @@
 				CODE_SIGN_IDENTITY = "Apple Distribution";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 45;
+				CURRENT_PROJECT_VERSION = 61;
 				DEVELOPMENT_TEAM = 8P23C332Y5;
 				"DEVELOPMENT_TEAM[sdk=appletvos*]" = 8P23C332Y5;
 				GENERATE_INFOPLIST_FILE = YES;
