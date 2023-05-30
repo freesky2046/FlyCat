@@ -44,7 +44,7 @@ class FCURLPlayViewController: UIViewController {
     
     deinit {
         player?.pause()
-//        removeObserver(self, forKeyPath: <#T##String#>, context: <#T##UnsafeMutableRawPointer?#>)
+
     }
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
