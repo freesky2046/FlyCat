@@ -14,6 +14,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        if #available(tvOS 13.0, *) {
+            window?.overrideUserInterfaceStyle = .light
+        }
         window = UIWindow();
         let vc = FCFirstViewController.build()
         let nav = UINavigationController(rootViewController: vc!)

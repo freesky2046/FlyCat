@@ -49,8 +49,19 @@ class FCHomeViewController: UIViewController,UICollectionViewDelegate,UICollecti
         super.viewDidAppear(animated)
         let token = FCNetworkUtil.userToken();
         if(token?.access_token == nil){
-            let login:FCLoginViewController? = FCLoginViewController.build();
-            self.present(login!, animated: true)
+            let alertController = UIAlertController(title: "登录后才能访问网盘", message:"", preferredStyle: .alert)
+            let confirmAction = UIAlertAction(title: "确定", style: .default) { _ in
+                let login:FCLoginViewController? = FCLoginViewController.build();
+                self.present(login!, animated: true)
+            }
+            let cancelAction = UIAlertAction(title: "回到首页", style: .cancel) {_ in
+                self.navigationController?.popViewController(animated: true)
+            }
+            alertController.addAction(confirmAction)
+            alertController.addAction(cancelAction)
+            present(alertController, animated: true, completion: nil)
+            
+        
         }else {
             refreshFileList()
         }
