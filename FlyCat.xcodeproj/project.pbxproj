@@ -776,7 +776,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 62;
+				CURRENT_PROJECT_VERSION = 63;
 				DEVELOPMENT_TEAM = 8P23C332Y5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "FlyCat-Info.plist";
@@ -807,7 +807,7 @@
 				CODE_SIGN_IDENTITY = "Apple Distribution";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 62;
+				CURRENT_PROJECT_VERSION = 63;
 				DEVELOPMENT_TEAM = 8P23C332Y5;
 				"DEVELOPMENT_TEAM[sdk=appletvos*]" = 8P23C332Y5;
 				GENERATE_INFOPLIST_FILE = YES;
