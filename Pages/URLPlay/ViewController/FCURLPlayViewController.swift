@@ -47,10 +47,15 @@ class FCURLPlayViewController: UIViewController {
 
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        UIViewController.hideHUD()
+    }
+    
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if let value = change?[.newKey] as? Int{
             if value == 1 {
-                player?.play()
+                self.player?.play()
                 UIViewController.hideHUD()
             }
             else if value == 2 {

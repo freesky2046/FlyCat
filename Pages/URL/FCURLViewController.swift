@@ -16,9 +16,9 @@ class FCURLViewController: UIViewController,UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         textField.delegate = self
-        #if DEBUG
-        textField.text = "http://qthttp.apple.com.edgesuite.net/1010qwoeiuryfg/sl.m3u8"
-        #endif
+//        #if DEBUG
+//        textField.text = "http://qthttp.apple.com.edgesuite.net/1010qwoeiuryfg/sl.m3u8"
+//        #endif
     }
     
 
